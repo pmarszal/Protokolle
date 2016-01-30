@@ -1,0 +1,23 @@
+\subsection{Simulation von Argon}
+
+Um sich mit dem Simulationsprogramm vertraut zu machen und eventuelle Schwächen der Simulation aufzuzeigen, wird zunächst ein simples Argon-Gas simuliert.
+Untersucht wird das Verhalten von Argon beim Abkühlen und Erhitzen.
+Dazu wird das Gas von 100~K auf 25~K abgekühlt. Dies wird für Zeiträume von 10~ns, 5~ns und 1~ns durchgeführt. Die Simulation liefert Details zur Energieverteilung und Temperatur des Argons.
+\\ \noindent
+Das Sieden von Argon wird untersucht, indem das Ergebnis der Abkühlung aus dem ersten Schritt, von 25~K auf 100~K erwärmt wird. Dies findet über einen Zeitraum von 10~ns statt.
+\\ \noindent
+Als nächstes wird die Anzahl der Argon Atome auf 216 erhöht und das Argon von 100~K auf 0~K innerhalb von 1~ns abgekühlt.
+
+\subsection{Simulation von Protein G B1}
+Zur Simulation des Proteins G B1 wird eine Struktur aus der \emph{protein data bank} verwendet. Um die heruntergeladene Struktur verwenden zu können, muss die Topologie-Datei mithilfe von \emph{GROMACS} erstellt werden.
+Das Protein wird nun in einem Simulationskasten mit Wassermolekülen umgeben. Die Kanten der Box haben dabei einen Mindestabstand von 7~\AA ~von der Oberfläche des Proteins. Auch hierfür wird eine Funktion von \emph{GROMACS} verwendet.
+Da das Protein G B1 4-fach negativ geladen ist, werden vier Wassermoleküle durch positiv geladene Natrium Ionen ersetzt.
+\\ \noindent
+Da es beim Laden der Struktur aus der .pdb Datei und dem Hinzufügen von Wasser zum Überlappen von Atomen kommen kann, muss nun eine Energieminimierung durchgeführt werden. Dabei werden die Koordinaten der Atome so variiert, dass sie in einem Minimum der potentiellen Energie zur Ruhe kommen.
+Der Unterschied zur herkömmlichen Molekulardynamik Simulation liegt hier darin, dass es sich um ein Minimum der potentiellen Energie handelt und nicht der freien Energie.
+\\ \noindent
+Nach der Minimierung der Energie, wird das Protein über längere Zeit simuliert.
+
+\subsection{Analyse der Bewegung eines Proteins}
+Die Bewegung von T4-Phage Lysozym wurde bereits im Voraus simuliert, da eine detaillierte Simulation zu lange für diesen Versuch dauert.
+Die Bewegung der einzelnen Atome wird mit PCA auf Hauptbewegungen reduziert, und anschließend mit experimentellen Daten verglichen.

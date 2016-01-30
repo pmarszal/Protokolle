@@ -1,0 +1,62 @@
+\subsection{Simulation von Argon}
+Betrachtet man den Verlauf der potentiellen Energie des Argon so stellt man für jede der Simulationen einen abrupten Abfall fest.
+Dies ist durch den Phasenübergang gasförmig-flüssig zu erklären.
+Die potentielle Energie des Gases ist durch die Summe der einzelnen effektiven Potentiale bestimmt.
+Beim Kondensieren, verringern sich die Abstände zwischen den Atomen stark. Die einzelnen Argonteilchen sitzen nahezu im Minimum des Potentials fest.
+Deswegen ist es möglich gewesen den Siedepunkt des Argons mithilfe der potentiellen Energie zu bestimmen.
+\\ \noindent
+Die in Tab. \ref{tab:siedepunkt} ermittelten Siedepunkte weichen stark von dem Literaturwert von 98~K \cite{phasediagram} ab. Auch zueinander sind die ermittelten Werte stark unterschiedlich.
+Da der einzige Unterschied zwischen den Simulationen der Zeitraum der Abkühlung ist, liegt es nahe, dass dieser die entscheidende Rolle für den Siedepunkt spielt.
+\\ \noindent
+Besonders deutlich ist die Abweichung der 1~ns Simulation. Auffällig ist, dass das Minimum der potentiellen Energie über diesen Zeitraum nicht erreicht wird.
+Sogar der mittels dem Fit ermittelte Siedepunkt wird nicht erreicht.
+Hier wird deutlich, dass der Algorithmus zur Temperatursenkung nicht für sehr kleine Zeitskalen anwendbar ist.
+Unter Umständen jedoch kann das Ergebnis für kleine Zeitskalen verbessert werden, wenn kleinere Integrationsschritte verwendet werden, um den Einfluss der Temperatursenkung auf das Resultat der Integration zu minimieren.
+\\ \noindent
+Ein gravierender Unterschied ist zwischen dem Erhitzen und Abkühlen festzustellen. In Abb. \ref{fig:cool_pot10ns}) ist zu erkennen, dass die Kurve der potentiellen Energie beim Erhitzen des flüssigen Argons ungenauer ist und keiner logistischen oder ähnlichen Kurve entspricht.
+Die Bestimmung des Siedepunktes für diese Kurve war leider nicht mit einem Fit an eine Logistische Kurve möglich, weswegen nur eine Schätzung möglich ist.
+Der Punkt der Maximalen Steigung ist bei ca. 8300~ps zu erkennen was einer Temperatur von ca. 105~K entspricht.
+Obwohl dieser Wert näher an dem Literaturwert liegt als die zuvor bestimmten Werte, ist dennoch anzunehmen, dass aufgrund der Kurvenform das Ergebnis wesentlich ungenauer ist.
+\\ \noindent
+Der Schmelzpunkt von Argon kann erneut durch den rapiden Abfall der potentiellen Energie in Abb. \ref{fig:liqpot}) bestimmt werden und liegt bei ca. 50~K.
+Der Literaturwert für den Schmelzpunkt von Argon bei 1~bar liegt bei 83.9~K \cite{chemicalcrc}. Da Argon keine Anomalie besitzt, wie z.B. Wasser, ist für einen höheren Druck von 5.8~bar auch ein höherer Schmelzpunkt zu erwarten.
+Das Ergebnis widerspricht also den theoretischen und experimentellen Ergebnissen.
+Auch hier ist möglicherweise die rapide Abkühlung und systematische Fehler der verwendeten Algorithmen die Ursache für die starke Abweichung.
+\\ \noindent
+Ein Phänomen, welches deutlich zu erkennen ist, ist die Kristallisation von Argon.
+Dies wird durch Abb. \ref{fig:nearest}) deutlich.
+Im flüssigen Zustand ist die Radiale Verteilung der Atome unscharf.
+Einzelne Argon Atome können sich noch um das Minimum des effektiven Potentials Bewegen.
+Nach dem Erstarren jedoch, befinden sich die meisten Argon Atome im exakten Minimum des Potentials.
+In Abb. \ref{fig:nearest}) wird das dadurch sichtbar, dass die Peaks der Kurve viel schmaler werden.
+Dass sich die Atome in einem Gitter anordnen wird dadurch deutlich, dass das zweite Maximum der Kurve ca. beim $\sqrt{2}$-fachen Abstand des ersten Maximums befindet.
+Die Atome im zweiten Maximum sind also nächste Nachbarn von Atomen des ersten Maximums.
+
+\subsection{Simulation des Proteins G B1}
+Die Simulation der B1 Domäne des Protein G zeigt, dass sich die Bewegung auf eine Handvoll von Aminosäuren beschränkt.
+Die Form des Proteins bleibt zum Großteil unverändert.
+Da das benutzte Kraftfeld nicht dem aus der Versuchsanleitung entspricht, ist auch die Abweichung der Residuen mit der größten Fluktuation aus Abb. \ref{fig:rmsf} unterschiedlich zu den in der Anleitung erwähnten Residuen 1, 11, 21, 38.
+Der zu erwartende Anstieg der Root-Mean-Square-Deviation der Atome, ist in Abb. \ref{fig:rmsd}) deutlich zu erkennen und spiegelt auch den Anstieg der potentiellen Energie in Abb. \ref{fig:rmpot}) wieder.
+\\ \noindent
+Einen besonders guten Einblick in die Rolle und das Vorkommen des Proteins lässt die Verteilung der hydrophoben und hydrophilen Gruppen auf der Oberfläche des Proteins zu.
+Da der Größte Teil der Oberfläche hydrophob ist, kann man darauf schließen, dass das Protein hauptsächlich in einer ebenfalls hydrophoben Umgebung anzutreffen ist.
+Dies ist wahrscheinlich die Membran des Bakteriums.
+\\ \noindent
+Unklar ist jedoch ob sich das Protein tatsächlich im Minimum der freien Energie befindet, da Abb. \ref{fig:rmsd}) möglicherweise nicht um einen konstanten Wert schwankt.
+Es ist über den gesamten Zeitraum der Simulation ein Anstieg zu verzeichnen.
+Um eine genaue Aussage über die natürliche Bewegung dieses Proteins treffen zu können müsste die Simulation über einen längeren Zeitraum stattfinden.
+
+\subsection{Analyse der Bewegung des Lysozyms}
+Betrachtet man die Animation der Bewegung des Lysozyms entlang der ersten beiden Hauptkomponenten so erkennt man eine Scherbewegung und eine Klappbewegung.
+Da diese Bewegungen hauptsächlich um das aktive Zentrum des Proteins stattfinden, liegt die Vermutung nahe, dass sie grundlegend für die Zersetzung des Substrates sind.
+\\ \noindent
+Abb. \ref{fig:exp}) macht deutlich wie wichtig Anfangsbedingungen und Simulationsdauer für die vollständige Beschreibung der Bewegung eines Proteins sind.
+Bereits zwei experimentelle Strukturen liefern nur etwa die Hälfte des möglichen Bewegungsraumes bei einer Simulation über 200~ns.
+Zudem geben die experimentellen Daten auch nicht unbedingt die reale Struktur des Proteins wieder.
+Des weiteren können auch experimentelle Daten unvollständig sein, sodass eventuell ein weiterer Cluster im Phasenraum von Abb. \ref{fig:exp}) existiert.
+Allerdings könnten hier weitere Bewegungen durch Simulationen erschlossen werden.
+\\ \noindent
+Ein interessantes Phänomen ist die Existenz von Clustern, die die experimentellen Daten andeuten und die Simulation 3 aufzeigt.
+Diese könnten als zwei unterschiedliche Zustände des Proteins interpretiert werden, die während der Substratverarbeitung durchlaufen werden und für kurze Zeit stabil sind.
+Die Funktion dieser Zustände könnte unter Umständen dadurch aufgeklärt werden, dass man die Form und Lage des Substrates zu Zeitpunkten bestimmt an denen das Protein in einem der beiden Zustände ist.
+Damit wäre ein tiefer Einblick in die Arbeitsweise des Enzyms möglich.
