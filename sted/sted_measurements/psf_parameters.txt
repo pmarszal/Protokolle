@@ -1,0 +1,6 @@
+sampling radius, 30
+pixel size, 10
+NA, 1.4
+nm, 640
+magni, 100
+
