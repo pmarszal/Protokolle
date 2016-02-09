@@ -1,3 +1,4 @@
+\section{Auswertung}
 \subsection{Messung der PSF}
 Zur Bestimmung der Form der PSF werden Aufnahmen, der xy-, xz, und yz-Ebene der Golbeads verwendet. 
 Dabei wird jeweils die Ausdehnung des Bildes in x-,y- und z-Richtung bestimmt.
@@ -16,10 +17,15 @@ x_{min} = \frac{\pi}{2}\omega.
 Die PSF wird mit ImageJ vermessen indem das Profil entlang der jeweiligen Achse durch das Maximum bestimmt wird.
 In Abb. \ref{fig:psffits} sind die alle Vermessungen der PSF zu sehen. In Tab. \ref{tab:psffits} sind die durch nonlinear-regression bestimmten Werte aufgetragen, der Fehler ergibt sich aus der bei der Regression auftretenden Standartabweichung.
 \\
-Die aus dem Aufbau nach Gleichung (\ref{eq:airy-disc}) bestimmte Airyscheibe hat einen Durchmesser von 557.7~nm für eine Wellenlänge von 640~nm und 675.4~nm für eine Wellenlänge von 775~nm.
+Die aus dem Aufbau nach Rayleigh (\ref{eq:airy-disc}) bestimmte Airyscheibe hat einen Durchmesser von 557.7~nm für eine Wellenlänge von 640~nm und 675.4~nm für eine Wellenlänge von 775~nm.
 \\
 Bei der Messung der Auslöschung der FLuoreszenz durch den STED-Laser wird eine konfokale Lochblende mit einem Durchmesser von 62.5~$\mu$m und einer 100-fachen Vergrößerung des Bildes benutzt. 
 Dies entspricht dem 1.12-fachen Durchmesser der Airyscheibe für 640~nm und 0.92-fachen Durchmesser der Airyscheibe für 775~nm.
+\\ 
+Ein geringerer Fehler der Messung der Ausdehnung der PSF ist für den Fit mit einer reinen Gaußfunktion zu erwarten, da die Minima nur sehr schwach ausgeprägt sind. 
+In diesem Fall lässt sich die FWHM durch die Gaußfunktion bestimmen.
+Die bestimmten Werte für die FWHM sind in Tab. \ref{tab:psffwhm} abzulesen. Eine Übersicht der gemessenen Profile mit zugehörigen Fits ist in Abb. \ref{fig:gaussfits} zu finden.
+Die sich aus dem Aufbau ergebenden Werte sind in Tab. \ref{tab:fwhmaufbau} zu sehen.
 \begin{figure}
 	\centering
 	\includegraphics[trim= 0 950 0 0, width=\textwidth]{plots/goldbeads.png}
@@ -32,68 +38,100 @@ Dies entspricht dem 1.12-fachen Durchmesser der Airyscheibe für 640~nm und 0.92
 
 \begin{table}
 	\centering
-	\caption{Ergebnisse der nonlinear-regression für den Abstand der ersten Minima von einander, für jede Messung.
-	Die Fehler ergeben sich aus der Standardabweichung der Messwerte von der mit der Regression bestimmten Kurve.
-Für die $y$-Achsen Messwerte ist der Fehler der Regression viel größer als der bestimmte Durchmesser, der weit außerhalb der betrachteten Region liegen würde. }
+	\caption{
+		Gewichtete Mittelwerte der Messungen des Durchmessers der Airyscheibe.
+Für die $y$-Achse bei $\lambda = 640$~nm ist der Fehler der Regression viel größer als der bestimmte Durchmesser, der weit außerhalb der betrachteten Region liegen würde.
+Bei der $\lambda = 775$~nm Messung hat nur ein Fit ein sinnvolles Ergebnis erzielt.}
 	% Python latex table
-	\begin{tabular}{l|l|l|c}
-		Wellenlänge~[nm] & Ebene & Achse & Durchmesser der Airyscheibe~[$\mu$m] \\ \hline 
-		640 & xy & x  &  0.604(6.0)\\ 
-		 &  & y  &  0.0(100000000.0)\\ 
-		 & xz & x  &  0.626(9.0)\\ 
-		 &  & z  &  1.559(6.0)\\ 
-		 & yz & y  &  0.0(100000000.0)\\ 
-		 &  & z  &  1.555(6.0)\\ 
-		775 & xy & x  &  0.668(6.0)\\ 
-		 &  & y  &  0.761(8.0)\\ 
-		 & xz & x  &  0.611(6.0)\\ 
-		 &  & z  &  1.53(9.0)\\ 
-		 & yz & y  &  0.0(100000000.0)\\ 
-		 &  & z  &  1.546(8.0)\\ \hline
-		640 &Gesamt & x & 0.610(5)\\
-		    &	&y& --\\ 
-		    &	&z& 1.557(4)\\
-		775 &	&x& 0.639(5)\\
-		    &	&y& 0.761(8)\\
-		    &	&z& 1.546(8)\\
+	\begin{tabular}{l|l|c}
+		Wellenlänge~[nm] & Achse & Durchmesser der Airyscheibe~[$\mu$m] \\ \hline 
+		640 & x & 0.610(5)\\
+		    &y& --\\ 
+		    &z& 1.557(4)\\ \hline
+		775 &x& 0.639(5)\\
+		    &y& 0.761(8)\\
+		    &z& 1.546(8)\\
 	\end{tabular}\label{tab:psffits}
 
 \end{table}
 
+\begin{table}
+	\centering
+	\caption{Werte für die FWHM der PSF, wie sie durch die Parameter des Aufbaus vorgegeben sind ($NA=1.4$). Die optische Schichtdicke $d_{schicht}$ wurde nach Gl. (\ref{eq:slice}) bestimmt mit einem Pinholedurchmesser von $PH = 625$~nm.}\label{tab:fwhmaufbau}
+	\begin{tabular}{l|rr}
+		Wellenlänge~[nm] & FWHM~[nm] & $d_{schicht}$ [nm]\\ \hline
+		640(lateral/axial) & 233.14/606.86 & 1135.4\\
+		775(lateral/axial) & 282.32/734.87 & 1208.7
+	\end{tabular}
+\end{table}
+
 \subsection{Tiefendiskriminierung}
 In Abb. \ref{fig:tiefe} ist der Intensitätsverlauf in Abhängigkeit von der $z$-Achse entlang der Farbfilmprobe dargestellt.
+Die Tiefendiskriminierung kann durch die Breite des Intensitätsabfalls abgeschätzt werden.
+Weil das Plateau der maximalen Intensität nicht exakt konstant ist wurde für den maximalen Wert der Mittellwert des Plateaus gebildet.
+Dafür wurde in Abb. \ref{fig:tiefe} nur der Bereich zwischen den eingezeichneten roten Linien benutzt.
+Die Tiefendiskriminierung entspricht in etwa der Länge nach dem die Intensität auf die Hälfte ihres ursprünglichen Wertes abgefallen ist.
+In der Abbildung ist dies der Abstand des rechten Randes des Plateaus zur vertikalen gelben Linie.
+Der so bestimmte Wert ergibt sich zu 532.5~nm.
+\\
+Aus dem Aufbau ergibt sich für die optische Schichtdicke (Gleichung (\ref{eq:slice})) ein Wert von 
+
 
 \begin{figure}
 	\centering
-	\includegraphics[width=\textwidth]{plots/tiefe.pdf}
+	\includegraphics[width=0.75\textwidth]{plots/tiefe.pdf}
 	\caption{Verlauf der gemessenen Intensität beim Scannen des Farbfilms entlang der $z$-Achse. Die Intensität entspricht der Anzahl der detektierten Photonen im Photomultiplier.
+		Die roten Linien markieren die Grenzen des Plateaus. 
+		Die horizontale gelbe Linie beschreibt die Höhe der halben Plateauintensität, und die vertikale gelbe Linie markiert die $z$-Koordinate bei dem dieser Wert erreicht ist.
+		Aus dem Abstand des Plateaus von der halben Intensität lässt sich die Tiefendiskriminierung abschätzen.
 	}\label{fig:tiefe}
 \end{figure}
 
 \subsection{STED-Auslöschung}
-Zur Bestimmung der Sättigungsintensität $I_S$ wurde die Auslöschung, der durch den Anregungslaser erzeugten Fluoreszenz durch den STED-Laser bestimmt. 
-Das Verhältnis zwischen Intensität des Anregungslasers und Restintensität ist in Abb. \ref{fig:depletion} dargestellt.
-Die Fehler der Messung werden als die Standardabweichung der Messwerte für eine gegebene STED-Leistung und Beleuchtung angenommen.
-
-Die Sättigungsintesität wird durch einen Fit der Funktion
-\begin{align}
-	f(x) = A \cdot \exp \left( -k \cdot x  \right).
-\end{align}
-bestimmt.
-Für die Sättigungsintensität gilt:
-\begin{align}
-	I_{S} = \frac{\log 2}{k}.
-\end{align}
-Der über die Regression bestimmte Wert liegt bei 3.08(1)~mW.
-
+Zu quantitativen Beschreibung der Auslöschung der Fluoreszenz durch den STED-Laser wird das Verhältnis der gemessenen Intensität ohne Auslöschung zur Intensität mit Auslöschung berechnet.
+Aus den Messwerten für die Intensitäten werden die Mittelwerte gebildet, wodurch auch der Effekt der Bleichung der Nanopartikel auf die Messung gemindert wird.
+\\
+Für die Sättigungsintensität ergibt sich ein Wert von $I_S = 3.2$~MW/cm$^2$.
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{plots/depletion.pdf}
 	\caption{Restintensität als Anteil der Anregungsintensität für verschiedene STED-Leistungen. 
 		Die Fehlerbalken ergeben sich aus der Standardabweichung der einzelnen Messungen für eine gegebene STED-Leistung und Beleuchtungsart. 
 		Die Messung der Intensität bei Beleuchtung duch den Anregungslaser allein ergibt vier Messwerte je STED-Leistung, und die Messung der Intensität bei gleichzeitiger Beleuchtung mit Anregungs- und STED-Laser liefert zwei Messwerte.
-	Die Kurve folgt einem exponentiellen Abfall mit Abfallrate $k=0.23$~[mW]$^{-1}$. 
-Die dadurch bestimmte Sättigungsintensität ist 3.08(1)~mW.}\label{fig:depletion}
+		Die Sättigungsintensität $I_S$ wurde über Interpolation der Messwerte bestimmt. 
+		Sie liegt bei $I_S = 3.2$~MW/cm$^2$.
+}\label{fig:depletion}
 \end{figure}
 
-
+\subsection{Auflösung der STED-Mikroskopie}
+Zunächst wird der STED-Ring untersucht und das Verhältnis der Maximalintensität zur Intensität in der Mitte des Ringes gebildet.
+Dazu wird der Intensitätsverlauf entlang der Achse durch Minimum und Maximum des Ringes untersucht. Dieser ist in Abb. \ref{fig:doughnut} zu sehen.
+Es ist zu erkennen, dass die Intensität in der Mitte des Ringes vollständig auf den Wert des Hintergrundes abfällt.
+In Abb. \ref{fig:doughnut} ist dieser gelb unterlegt.
+Die Differenz zwischen Maximum und Minimum beträgt ca. 38~\% der maximalen Intensität. 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.75\textwidth]{plots/doughnut.pdf}
+	\caption{Intensitätsverlauf entlang der Achse durch den Maximalwert des Ringes und dem Mittelpunkt.
+	Die Intensität des Minimums entspricht dem Niveau der Intensität außerhalb des Ringes.}
+	\label{fig:doughnut}
+\end{figure}
+\\ 
+Die Auflösung der STED-Mikroskopie wird unter Verwendung des ImageJ Plugins \emph{MosaicSuite} und der darin befindlichen Funktion PSF-Tool bestimmt.\\
+Dieses Werkzeug erlaubt die Bestimmung der FWHM einer Aufnahme oder eines gesamten Aufbaus, durch die Berechnung der PSF, die durch einzelne isolierte Punkte erzeugt wird.
+Die PSFs mehrerer Nanopartikel wird dann gemittelt und daraus der Mittelwert der FWHMs bestimmt.
+\\
+Die so bestimmten Werte für die FWHM sind als Funktion der relativen STED-Intensität $\zeta = I_{STED}/I_S$ in Abb. \ref{fig:sted_res} aufgetragen.
+Durch den Fit mit der Funktion (\ref{eq:d-fit})
+\begin{align}
+	d = \frac{d_{konfokal}}{\sqrt{1+k^2\zeta}}, \label{eq:d-fit}
+\end{align}
+wird der Einfluss $k$ aller nicht spektroskopischen Größen auf die Auflösung bestimmt.
+Der Parameter $d$ bezieht sich zunächst auf die Auflösung der STED-Mikroskopie, wird aber als proportional zur FWHM angenommen.
+Aus den Messwerten ergibt sich $k = 0.56(8)$.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.75\textwidth]{plots/fwhm_zeta.pdf}
+	\caption{FWHM als Funktion der Intensität des STED-Lasers. Der Fit führt zu den Ergebnissen $k = 0.56(8)$ und $d_{konfokal} = 1500(1)$~nm. 
+	}\label{fig:sted_res}
+\end{figure}
