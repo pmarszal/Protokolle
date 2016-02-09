@@ -13,7 +13,8 @@
 \usepackage{amsmath}
 \usepackage{amstext}
 \usepackage{epstopdf}
-
+\usepackage[title, titletoc, toc]{appendix}
+\usepackage{placeins}
 %huebsche kopfzeilen
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -109,4 +110,12 @@
 
 %\section{Diskussion}
 %\input{disk.tex}
+\FloatBarrier
+\newpage
+\bibliography{master}{}
+\bibliographystyle{plain}
+\newpage
+\FloatBarrier
+\input{appendix.tex}
+
 \end{document}

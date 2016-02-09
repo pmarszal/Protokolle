@@ -1,0 +1,33 @@
+\begin{thebibliography}{1}
+
+\bibitem{beyer}
+H~Beyer.
+\newblock {\em Handbuch der Mikroskopie}.
+\newblock VEB Verlag Technik Berlin, 2nd edition edition, 1985.
+
+\bibitem{hell_exp}
+Marcus Dyba and Stefan~W. Hell.
+\newblock Focal spots of size $\ensuremath{\lambda}/23$ open up far-field
+  florescence microscopy at 33 nm axial resolution.
+\newblock {\em Phys. Rev. Lett.}, 88:163901, Apr 2002.
+
+\bibitem{haken}
+Haken and Wolf.
+\newblock {\em Molekülphysik und Quantenchemie}.
+\newblock Springer, 5th edition, 2006.
+
+\bibitem{hell}
+Stefan~W. Hell.
+\newblock Nanoskopie mit fokussiertem licht.
+\newblock {\em Physik Journal 6}, 2007.
+
+\bibitem{Born}
+E.~Wolf M.~Born.
+\newblock In {\em Principles of Optics}. Pergamon, 6th edition edition, 1980.
+
+\bibitem{sparrow}
+C.~M. {Sparrow}.
+\newblock {On Spectroscopic Resolving Power}.
+\newblock {\em The Astrophysical Journal}, 44:76, September 1916.
+
+\end{thebibliography}

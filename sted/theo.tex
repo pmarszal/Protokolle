@@ -26,7 +26,7 @@ Hierbei beschreibt $\lambda$ die Wellenlänge des zu Mikroskopieren verwendeten 
 Der Term $n\sin\alpha$ wird als die numerische Apertur eines Objektivs $NA$ bezeichnet \cite{Born}.
 \\
 Experimentell ist die Auflösung nach Rayleigh oder Sparrow nur schwer zu messen. 
-Als Maß für die Auflösung kann jedoch die Halbwertsbreite der PSF (FWHM, \emph{full width at half maximum} benutzt werden. 
+Als Maß für die Auflösung kann jedoch die Halbwertsbreite der PSF (FWHM, \emph{full width at half maximum}) benutzt werden. 
 %• Erklärung Fluoreszenz und Fluoreszenzmikroskopie mit Jablonski-Diagramm.
 \subsection{Fluoreszenzmikroskopie}
 Eine besondere Art von Lichtmikroskopie ist die Fluoreszenzmikroskopie.
@@ -39,6 +39,7 @@ Durch die Relaxation aus dem Schwingungszustand besitzt das Molekül eine gering
 Dies führt dazu, dass emittiertes Licht eine größere Wellenlänge hat als absorbiertes Licht. Dieses Phanomen trägt den Namen Stokes-Shift \cite{haken}.
 \\
 Der Vorteil der Fluoreszenzmikroskopie gegenüber der herkömmlichen Lichtmikroskopie ist, dass gezielt Strukturen mit Fluoreszenzfarbstoff präpariert werden können (über Proteine u.ä.) und ungewollte Brechungszentren ausgeblendet werden können.
+Durch im Strahlengang eingesetzte Farbfilter wird gewährleistet, dass lediglich die emittierte Wellenlänge in das Objektiv gelangt und reflektiertes Licht abgeschrimt wird.
 %• Konfokal-Mikroskopie: gehen Sie hier bitte kurz auf die Rolle der Lochblende ein
 \subsection{Konfokalmikroskopie}
 Eine Form der Fluoreszenzmikroskopie ist die Konfokalmikroskopie. 
@@ -63,6 +64,33 @@ $PH$ bezeichnet den Durchmeser der konfokalen Lochblende.
 %• STED-Mikroskopie: Erklärung des zugrundeliegenden Prinzips zur Auflösungs-
 %erhöhung mit eigenen Worten (wichtig!).
 \subsection{STED-Mikroskopie}
+Die STED-Mikroskopie bietet eine Möglichkeit, die ansonsten in der Lichtmikroskopie auftretende Begrenzung der Auflösung durch Beugung zu umgehen.
+Sie basiert auf der Fluoreszenzmikroskopie, und wird häufig mit einem konfokalen Aufbau realisiert.
+\\
+STED steht für \emph{stimulated emission depletion}, und bezieht sich auf die Abregung von Fluoreszenzmolekülen durch das Prinzip der stimulierten Emission. 
+Im Gegensatz zur konventionellen Fluoreszenzmikroskopie, kommen zwei Laser unterschiedlicher Wellenlängen zum Einsatz \cite{hell}. 
+Der Anregungslaser verfügt über eine PSF wie sie auch in der herkömmlichen Konfokalmikroskopie angewendet wird, i.e. eine gewöhnliche Airyscheibe.
+Hinzu kommt nun ein Abregungslaser oder STED-Laser, dessen PSF die Form eines Ringes hat. Die Wellenlänge des STED-Lasers ist dabei größer als die des Anregungslasers.
+Die PSFs beider Laser sind so überlagert, dass das Maximum der Anregung im Mittelpunkt des Ringes liegt.
+\\
+Der Anregungslaser regt Moleküle auf ein höheres Energieniveau an, die daraufhin unter Aussendung von Photonen wieder in ihren Grundzustand zurückkehren.
+\\
+Durch stimulierte Emission, lässt sich die Photonemission einer spezifischen Wellenlänge kontrolliert herbeiführen.
+Interagiert ein angeregtes Elektron des Moleküls mit einem Photon dessen Wellenlänge dem Übergang zu einem niedrigeren Energieniveau entspricht, so fällt das Elektron in diesen Zustand unter Aussendung eines weiteren Photons dieser Wellenlänge.
+\\
+Dieses Prinzip wird durch den STED-Laser angewendet. Dadurch werden Moleküle aus dem Ring wieder abgeregt.
+Da die Moleküle jedoch in der Regel in einen vibronischen Zustand fallen, können diese nicht sofort wieder durch den Anregungslaser zur Fluoreszenz angeregt werden.
+So werden gezielt Fluoreszenzmoleküle um einen Punkt herum ausgeschaltet.
+Als direkte Folge der Ratengleichungen nimmt die Anzahl der ausgeschalteten Moleküle mit steigender Intensität des STED-Lasers $I_{STED}$ exponentiell ab \cite{hell_exp}.
+Die STED-Intensität bei der die Hälfte aller angeregten Moleküle ausgeschaltet wurde wird als Sättigungsintensität $I_S$ bezeichnet.
+\\
+Detektiert wird jetzt nur das von den verbleibenden fluoreszierenden Molekülen ausgesendete Licht. 
+Es kann gezeigt werden, dass der Durchmesser der Scheibe, in der die Moleküle nicht abgeregt werden, mit steigender Intensität des STED-Lasers abnimmt \cite{hell}.
+\begin{align}
+	d = \frac{\lambda_{ex}}{2NA\sqrt{1+I_{STED}/I_S}}. \label{eq:sted_res}
+\end{align}
+Dies ermöglich eine theoretisch unbegrenzt gute Auflösung, deren Grenze nur durch die Leistung des STED-Lasers und der räumlichen Ausdehung eines Fluoreszenzmoleküls festgelegt ist.
+
 %• Motivation / Definition des Sättigungsfaktors aus den Ratengleichungen von An-
 %regung und stimulierter Emission.
 %• Skalierung der Auflösung mit der Intensität.
