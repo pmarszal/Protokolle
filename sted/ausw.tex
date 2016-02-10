@@ -146,6 +146,7 @@ Die Differenz zwischen Maximum und Minimum beträgt ca. 38~\% der maximalen Inte
 \\ 
 Die Auflösung der STED-Mikroskopie wird unter Verwendung des ImageJ Plugins \emph{MosaicSuite} und der darin befindlichen Funktion PSF-Tool bestimmt.\\
 Dieses Werkzeug erlaubt die Bestimmung der FWHM einer Aufnahme oder eines gesamten Aufbaus, durch die Berechnung der PSF, die durch einzelne isolierte Punkte erzeugt wird.
+Die verwendeten Parameter für das PSF-Tool sind ein Sampling-Radius von 30~px und eine Pixelgröße von 1~$\mu$m.
 Die PSFs mehrerer Nanopartikel wird dann gemittelt und daraus der Mittelwert der FWHMs bestimmt.
 \\
 Die so bestimmten Werte für die FWHM sind als Funktion der relativen STED-Intensität $\zeta = I_{STED}/I_S$ in Abb. \ref{fig:sted_res} aufgetragen.
@@ -157,13 +158,14 @@ Der Fit dieser Funktion an die Messwerte ergibt einen Wert von $k=0.47(7)$.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.75\textwidth]{plots/fwhm_zeta.pdf}
-	\caption{FWHM als Funktion der Intensität des STED-Lasers. Der Fit führt zu den Ergebnissen $k = 0.47(7)$ und $d_{konfokal} = 1500(100)$~nm. 
+	\caption{FWHM als Funktion der Intensität des STED-Lasers. Der Fit führt zu den Ergebnissen $k = 0.47(7)$ und $d_{konfokal} = 150(10)$~nm. 
 	}\label{fig:sted_res}
 \end{figure}
 
 \subsection{Untersuchung der Mikrotubuli}
 In Abb. \ref{fig:nosted} bis \ref{fig:tubuli_sted} sind mit dem Aufbau aufgenommene Bilder der Mikrotubuli zu sehen.
-
+Mithilfe des PSF-Tools wird auch hier die Auflösung bestimmt. 
+Sie ergibt sich zu 40(8)~nm. Dies liegt sehr nah an der Größe der Tubulidurchmesser, die ca. 25~nm beträgt.
 \begin{figure}
 \centering
 \begin{subfigure}{0.3\textwidth}
