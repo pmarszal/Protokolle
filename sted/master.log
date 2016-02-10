@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.1.14)  10 FEB 2016 02:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.1.14)  10 FEB 2016 11:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -613,7 +613,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--89
 \openout4 = `master.toc'.
 
  [1]
-(./theo.tex <plots/micro.jpg, id=14, 195.129pt x 118.041pt>
+(./einl.tex) (./theo.tex <plots/micro.jpg, id=14, 195.129pt x 118.041pt>
 File: plots/micro.jpg Graphic file (type jpg)
 
 <use plots/micro.jpg>
@@ -638,20 +638,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[1 <./plots/micro.jpg>] <plots/jablonski.png, id=21, 287.1528pt x 223.0734pt>
+[1] <plots/jablonski.png, id=21, 287.1528pt x 223.0734pt>
 File: plots/jablonski.png Graphic file (type png)
 
 <use plots/jablonski.png>
 Package pdftex.def Info: plots/jablonski.png used on input line 43.
 (pdftex.def)             Requested size: 247.16577pt x 192.01637pt.
- [2 <./plots/convolve.pdf>] [3 <./plots/jablonski.png>] [4]) (./aufbau.tex <plo
-ts/aufbau.png, id=84, 437.635pt x 381.26692pt>
+ [2 <./plots/micro.jpg>] [3 <./plots/convolve.pdf> <./plots/jablonski.png>] [4]
+ [5]) (./aufbau.tex
+<plots/aufbau.png, id=88, 437.635pt x 381.26692pt>
 File: plots/aufbau.png Graphic file (type png)
-
-<use plots/aufbau.png>
+ <use plots/aufbau.png>
 Package pdftex.def Info: plots/aufbau.png used on input line 4.
 (pdftex.def)             Requested size: 308.95407pt x 269.16553pt.
-) [5] [6 <./plots/aufbau.png>] (./durch.tex
+)
+[6 <./plots/aufbau.png>] (./durch.tex
 
 Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
  Make it at least 14.89197pt.
@@ -664,13 +665,13 @@ File: plots/goldbeads.png Graphic file (type png)
 <use plots/goldbeads.png>
 Package pdftex.def Info: plots/goldbeads.png used on input line 31.
 (pdftex.def)             Requested size: 411.93877pt x 233.62413pt.
- <plots/tiefe.pdf, id=99, 433.62pt x 289.08pt>
+ [9] [10 <./plots/goldbeads.png>]
+<plots/tiefe.pdf, id=106, 433.62pt x 289.08pt>
 File: plots/tiefe.pdf Graphic file (type pdf)
-
-<use plots/tiefe.pdf>
+ <use plots/tiefe.pdf>
 Package pdftex.def Info: plots/tiefe.pdf used on input line 89.
 (pdftex.def)             Requested size: 247.16577pt x 164.7773pt.
- [9] [10 <./plots/goldbeads.png>] [11]
+ [11]
 <plots/depletion.pdf, id=111, 722.7pt x 505.89pt>
 File: plots/depletion.pdf Graphic file (type pdf)
  <use plots/depletion.pdf>
@@ -756,11 +757,14 @@ Package pdftex.def Info: plots/goldbeads2.png used on input line 5.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 5486 strings out of 494948
- 78097 string characters out of 6178809
- 154592 words of memory out of 5000000
+ 5489 strings out of 494948
+ 78119 string characters out of 6178809
+ 153592 words of memory out of 5000000
  8528 multiletter control sequences out of 15000+600000
  40500 words of font info for 87 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -777,7 +781,7 @@ amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on master.pdf (19 pages, 2359715 bytes).
+Output written on master.pdf (19 pages, 2360716 bytes).
 PDF statistics:
  390 PDF objects out of 1000 (max. 8388607)
  146 compressed objects within 2 object streams
