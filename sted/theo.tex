@@ -2,17 +2,26 @@
 %Mikroskopietechniken mit Literaturrecherche (ca. 1 Seite).
 \subsection{Lichtmikroskopie}
 STED-Mikroskopie ist eine Form der Lichtmikroskopie, die eine besonders gute Auflösung erreicht im Vergleich zu klassischen Mikroskopen.
-Das klassische Lichtmikroskop basiert auf einem simplen Aufbau aus Linsen, wie er für den einfachsten Fall in Abb. \ref{fig:lightmic} zu sehen ist.
+Das klassische Lichtmikroskop basiert auf einem simplen Aufbau aus Linsen, wie er für einen einfachen Fall in Abb. \ref{fig:lightmic} zu sehen ist.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.75\textwidth]{}
+	\includegraphics[width=0.6\textwidth]{plots/micro.jpg}\caption{Schematische Darstellung eines Zwei-Linsen Mikroskops aus. (Quelle: https://wiki.physik.fu-berlin.de)}\label{fig:lightmic}
 \end{figure}
-Im simpelsten Fall wirft die erste Linse, das Objektiv, ein Bild in die Fokusebene der zweiten Linse, dem Okular \cite{Dem2}.
+Im simpelsten Fall besteht wirft die erste Linse, das Objektiv, ein Bild in die Fokusebene der zweiten Linse, dem Okular \cite{Dem2}.
 Der kleinst mögliche Abstand zweier Punkte unter dem noch zwei getrennte Punkte erkannt werden können ist die Auflösung des Mikroskops.
 Sie ist bei der Lichtmikroskopie grundlegend durch Beugung beschränkt.
 Beugung bewirkt, dass das Bild eines Punktes kein weiterer Punkt ist sondern eine mithilfe der Besselfunktion beschriebene Verteilung konzentrischer Ringe \cite{Born}, die sogenannte Punktspreizfunktion (PSF, \emph{point spread function}).
 Insbesondere hat das Zentrum der Ringe, das erste Maximum, eine endliche Ausdehnung.
 Dieses erste Maximum wird im Allgemeinen als Arrayscheibe bezeichnet.
+\\
+Das mit einem Mikroskop aufgenommene Bild einer Probe entspricht in seiner Form der Faltung der realen Form der Probe mit der PSF des Mikroskops.
+Auf eine scharfe Kante wirkt diese Faltung als Glättung, sodass im Bild nur ein gradueller Übergang zu erkennen ist.
+Die Wirkung der Faltung einer Kante mit einer Arrayscheibe ist in Abb. \ref{fig:convolution} schematisch dargestellt.\\
+\begin{figure}
+	\centering
+	\includegraphics[width=0.75\textwidth]{plots/convolve.pdf}
+	\caption{Faltung einer Kante (Stufenfunktion) mit einer Arrayscheibe (hier durch eine Gauß'sche Funktion genähert). Aus dem diskreten Sprung wird ein Gradient (in diesem Beispiel die Errorfunktion).}\label{fig:convolution}
+\end{figure}
 Liegen zwei Punkte zu dicht beieinander so überlappen sich ihre Arrayscheiben, und die Punkte können nicht mehr aufgelöst werden.\\
 Die minimale Distanz, die zwei Punkte voneinander haben müssen, um als zwei Punkte erkannt zu werden, wird durch Auflösungskriterien bestimmt.
 Das Sparrow'sche Auflösungskriterium \cite{sparrow} besagt, dass zwei Punkte (im Original Sterne) dann noch aufgelöst werden können, wenn die Intensitätsverteilung zwischen zwei Maxima gerade noch ein Minimum aufweist.
@@ -29,6 +38,11 @@ Experimentell ist die Auflösung nach Rayleigh oder Sparrow nur schwer zu messen
 Als Maß für die Auflösung kann jedoch die Halbwertsbreite der PSF (FWHM, \emph{full width at half maximum}) benutzt werden. 
 %• Erklärung Fluoreszenz und Fluoreszenzmikroskopie mit Jablonski-Diagramm.
 \subsection{Fluoreszenzmikroskopie}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{plots/jablonski.png}
+	\caption{Jablonski-Diagramm. (Quelle: en.wikipedia.org)}\label{fig:jablonski}
+\end{figure}
 Eine besondere Art von Lichtmikroskopie ist die Fluoreszenzmikroskopie.
 Im Gegensatz zur klassischen Mikroskopie wird nicht, das von der Probe reflektierte oder an der Probe gebrochene Licht im Okular detektiert, vielmehr wird die Probe selbst zum Leuchten angeregt.
 Das Prinzip der Fluoreszenz besteht darin Moleküle mithilfe von Licht einer spezifischen Wellenlänge in einen energetisch höheren Zustand zu versetzen. 
