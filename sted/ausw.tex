@@ -99,6 +99,8 @@ Zu quantitativen Beschreibung der Auslöschung der Fluoreszenz durch den STED-La
 Aus den Messwerten für die Intensitäten werden die Mittelwerte gebildet, wodurch auch der Effekt der Bleichung der Nanopartikel auf die Messung gemindert wird.
 \\
 Für die Sättigungsintensität ergibt sich ein Wert von $I_S = 3.2$~MW/cm$^2$.
+Aus Simulationen ist bekannt, dass die Sättigungsintensität durch diese Messung überschätzt wird. Der reale Wert ist um einen Faktor $0.71$ kleiner als der gemessene.
+Damit erhält man einen Wert von $I_S = 2.272$.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.75\textwidth]{plots/depletion.pdf}
@@ -106,7 +108,7 @@ Für die Sättigungsintensität ergibt sich ein Wert von $I_S = 3.2$~MW/cm$^2$.
 		Die Fehlerbalken ergeben sich aus der Standardabweichung der einzelnen Messungen für eine gegebene STED-Leistung und Beleuchtungsart. 
 		Die Messung der Intensität bei Beleuchtung duch den Anregungslaser allein ergibt vier Messwerte je STED-Leistung, und die Messung der Intensität bei gleichzeitiger Beleuchtung mit Anregungs- und STED-Laser liefert zwei Messwerte.
 		Die Sättigungsintensität $I_S$ wurde über Interpolation der Messwerte bestimmt. 
-		Sie liegt bei $I_S = 3.2$~MW/cm$^2$.
+		Der fehlerbehobene Wert liegt bei $I_S = 2.272$~MW/cm$^2$.
 }\label{fig:depletion}
 \end{figure}
 
@@ -152,11 +154,11 @@ Ersetzt man in Gleichung (\ref{eq:sted_res}) den Term $\frac{\lambda}{2NA}$ durc
 \begin{align}
 	d = \frac{d_{konfokal}}{\sqrt{1+k^2\zeta}}, \label{eq:d-fit}
 \end{align}
-Der Fit dieser Funktion an die Messwerte ergibt einen Wert von $k=0.56(8)$.
+Der Fit dieser Funktion an die Messwerte ergibt einen Wert von $k=0.47(7)$.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.75\textwidth]{plots/fwhm_zeta.pdf}
-	\caption{FWHM als Funktion der Intensität des STED-Lasers. Der Fit führt zu den Ergebnissen $k = 0.56(8)$ und $d_{konfokal} = 1500(100)$~nm. 
+	\caption{FWHM als Funktion der Intensität des STED-Lasers. Der Fit führt zu den Ergebnissen $k = 0.47(7)$ und $d_{konfokal} = 1500(100)$~nm. 
 	}\label{fig:sted_res}
 \end{figure}
 
