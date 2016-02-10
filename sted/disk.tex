@@ -1,0 +1,30 @@
+\section{Diksussion}
+Vergleicht man die theoretisch erwarteten Werte für den Durchmesser der Airyscheibe mit den gemessenen, so stellt man fest, dass die Messung ca. 10 bis 12~\% über theoretischen Werten liegt.
+Dies ist mit Sicherheit verursacht durch die endliche Ausdehnung der Goldbeads, die keine ideale Punkte darstellen.
+\\
+Eine weitere Abweichung von theoretischen Werten findet man bei Betrachtung der FWHMs der Goldbead-PSFs. Auch hier wird die Ausdehnung überschätzt. 
+Hinzukommt jedoch auch die stark unterschiedliche Ausdehnung in $x$- und $y$-Richtung. 
+Die PSF scheint in $y$-Richtung breiter zu sein als in $x$-Richtung. 
+Vermutlich handelt es sich bei den Goldbeads auch nicht um perfekte Kugeln, sondern vielmehr um Ellipsoide. Unter Umständen wird das Goldbead auch durch die starke Intensität der Laser während der Messung verformt.
+\\
+Eine prinzipielle Schwierigkeit der Bestimmung der Auflösung nach Rayleigh besteht in dem Fit mit der Funktion (\ref{eq:psfapprox}).
+Die Intensitätsverteilungen scheinen deutlicher der Gauß'schen Funktion zu folgen, als einem erwarteten Interferenzmuster. 
+Demnach ist der Fit einer oszillierenden Funktion an die Messwerte nur eingeschränkt sinnvoll, was auch aus den Ergebnissen für die $y$-Achse deutlich wird.
+\\
+Die bestimmte Tiefendiskriminierung des Mikroskops lässt sich mit der axialen Auflösung und der optischen Schichtdicke aus Tab. \ref{tab:fwhmaufbau} vergleichen. 
+Die experimentell abgeschätzte Tiefendiskriminierung wird im Vergleich zur axialen Auflösung unterschätzt. 
+Allerdings liefert sie überraschend plausible Werte beim Vergleich mit der optischen Schichtdicke.
+Sie entspricht in etwa der Hälfte von $d_{schicht}$. Dies ist theoretisch einsichtlich, wenn man bedenkt, dass eine geglättete Stufenfunktion genau dann auf die Hälfte ihres Maximalwertes sinkt, wenn sie nur zu Hälfte mit der PSF überlappt. 
+\\
+Die Messung der Sättigungsintensität $I_S$ ist zufriedenstellend. Es ist nur anzumerken, dass die Fehler der Messwerte unterschätzt werden, da nur die sich aus dem Mitteln ergebenden Fehler betrachtet werden. 
+Dies ist so auch auf sämtliche Messungen anwendbar, da keine genauen Angaben über die Genauigkeit der Messinstrumente gegeben ist.
+\\
+Die Form des STED-Doughnuts ist erstaunlich gut zu erkennen in Abb. \ref{fig:doughnut_psf}. Auch wenn der Ring unregelmäßigkeiten ausweist, so scheint nach Abb. \ref{fig:doughnut} des Zentrum des Ringes tatsächlich vollständig abgedunkelt zu sein.
+\\
+Ein größeres Problem ist bei der Messung der Auflösung der STED-Mikroskopie aufgetreten. Mit dem Fit in Abb. \ref{fig:sted_res} wird ein Wert $d_{konfokal} \approx 1500$~nm bestimmt.
+Dieser liegt weit über den zuvor bestimmten konfokalen Auflösungen von ca. 250~nm für die FWHM.
+Grund dafür liegt mit hoher Wahrscheinlichkeit in der Benutzung des PSF Tools.
+Das PSF Tool benötigt um eine korrekte Schätzung der PSF vornehmen zu können eine isolierte Punktquelle im Bild.
+Aufgrund der hohen Dichte der Nanobeads konnte allerdings gerade bei geringen STED-Intensitäten keine isloierte Punktquelle gefunden werden. 
+Für das Ergebniss $k$ hat dieser Fehler allerding nur geringen bis keinen Einfluss, da der Fehler nur einen konstanten Faktor verursacht.
+

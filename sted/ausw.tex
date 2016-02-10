@@ -3,8 +3,7 @@
 Zur Bestimmung der Form der PSF werden Aufnahmen, der xy-, xz, und yz-Ebene der Golbeads verwendet. 
 Dabei wird jeweils die Ausdehnung des Bildes in x-,y- und z-Richtung bestimmt.
 Da die Goldkügelchen in erster Näherung als rund angenommen werden können, ist die Form der PSF theoretisch bekannt.
-Sie folgt der Besselfunktion $J_1$, für die Beugung von Licht an einer Kreisblende.
-Dieses Interferenzmuster kann angenähert werden durch die Funktion \ref{eq:psfapprox}
+Das Interferenzmuster kann angenähert werden durch die Funktion (\ref{eq:psfapprox}):
 \begin{align}
 	f(x)=I_0 \cdot \exp \left( -k \cdot x^2 \right) \cdot \cos \left(-\omega\cdot x\right). \label{eq:psfapprox}
 \end{align}
@@ -38,18 +37,18 @@ Die sich aus dem Aufbau ergebenden Werte sind in Tab. \ref{tab:fwhmaufbau} zu se
 \begin{table}
 	\centering
 	\caption{
-		Gewichtete Mittelwerte der Messungen des Durchmessers der Airyscheibe.
+		Gewichtete Mittelwerte der Messungen des Abstandes der ersten Minima voneinander. In $x$- und $y$-Richtung entspricht dies dem Durchmesser der Airyscheibe.
 Für die $y$-Achse bei $\lambda = 640$~nm ist der Fehler der Regression viel größer als der bestimmte Durchmesser, der weit außerhalb der betrachteten Region liegen würde.
 Bei der $\lambda = 775$~nm Messung hat nur ein Fit ein sinnvolles Ergebnis erzielt.}
 	% Python latex table
 	\begin{tabular}{l|l|c}
-		Wellenlänge~[nm] & Achse & Durchmesser der Airyscheibe~[$\mu$m] \\ \hline 
-		    &x&0.610(5)\\
+		Wellenlänge~[nm] & Achse & Doppelte Auflösung (Rayleigh)~[nm] \\ \hline 
+		    &x&610(5)\\
 		 640&y&--\\ 
-		    &z&1.557(4)\\ \hline
-		    &x&0.639(5)\\
-		 775&y&0.761(8)\\
-		    &z&1.546(8)\\
+		    &z&1557(4)\\ \hline
+		    &x&639(5)\\
+		 775&y&761(8)\\
+		    &z&1546(8)\\
 	\end{tabular}\label{tab:psffits}
 \end{table}
 \begin{table}
@@ -100,7 +99,7 @@ Aus den Messwerten für die Intensitäten werden die Mittelwerte gebildet, wodur
 \\
 Für die Sättigungsintensität ergibt sich ein Wert von $I_S = 3.2$~MW/cm$^2$.
 Aus Simulationen ist bekannt, dass die Sättigungsintensität durch diese Messung überschätzt wird. Der reale Wert ist um einen Faktor $0.71$ kleiner als der gemessene.
-Damit erhält man einen Wert von $I_S = 2.272$.
+Damit erhält man einen Wert von $I_S = 2.272$~MW/cm$^2$.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.75\textwidth]{plots/depletion.pdf}
