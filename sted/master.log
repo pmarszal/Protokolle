@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.1.14)  10 FEB 2016 14:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.1.14)  10 FEB 2016 17:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -567,17 +567,12 @@ LaTeX Font Info:    ... okay on input line 42.
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+ <georg.pdf, id=1, 480.79625pt x 397.485pt>
+File: georg.pdf Graphic file (type pdf)
+ <use georg.pdf>
+Package pdftex.def Info: georg.pdf used on input line 46.
+(pdftex.def)             Requested size: 68.82964pt x 56.9055pt.
 
-
-! LaTeX Error: File `georg' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.46  \includegraphics[height=2cm]{georg}
-                                          \hfill
-? 
 
 ! LaTeX Error: There's no line here to end.
 
@@ -588,32 +583,34 @@ Type  H <return>  for immediate help.
 l.55 \large {} \\
                  
 ? 
-LaTeX Font Info:    Try loading font information for U+msa on input line 66.
+LaTeX Font Info:    Try loading font information for U+msa on input line 67.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 66.
+LaTeX Font Info:    Try loading font information for U+msb on input line 67.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for T1+aett on input line 76.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 80.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 87--87
+) [1
 
- []
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./master.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./georg.pdf>] [1] (./maste
+r.toc)
 \tf@toc=\write4
 \openout4 = `master.toc'.
 
- [1]
-(./einl.tex) (./theo.tex <plots/micro.jpg, id=13, 195.129pt x 118.041pt>
+ [2] (./einl.tex)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[1] (./theo.tex <plots/micro.jpg, id=31, 195.129pt x 118.041pt>
 File: plots/micro.jpg Graphic file (type jpg)
 
 <use plots/micro.jpg>
@@ -621,149 +618,167 @@ Package pdftex.def Info: plots/micro.jpg used on input line 8.
 (pdftex.def)             Requested size: 247.16577pt x 149.52133pt.
 
 
-LaTeX Warning: Citation `Dem2' on page 1 undefined on input line 10.
+LaTeX Warning: Citation `Dem2' on page 2 undefined on input line 10.
 
-<plots/convolve.pdf, id=14, 433.62pt x 289.08pt>
+<plots/convolve.pdf, id=32, 433.62pt x 289.08pt>
 File: plots/convolve.pdf Graphic file (type pdf)
  <use plots/convolve.pdf>
 Package pdftex.def Info: plots/convolve.pdf used on input line 22.
 (pdftex.def)             Requested size: 308.95407pt x 205.98045pt.
 
 
-LaTeX Warning: Citation `Dem2' on page 1 undefined on input line 29.
+LaTeX Warning: Citation `Dem2' on page 2 undefined on input line 29.
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[1] <plots/jablonski.png, id=20, 287.1528pt x 223.0734pt>
+[2 <./plots/micro.jpg>] <plots/jablonski.png, id=37, 287.1528pt x 223.0734pt>
 File: plots/jablonski.png Graphic file (type png)
 
 <use plots/jablonski.png>
 Package pdftex.def Info: plots/jablonski.png used on input line 43.
 (pdftex.def)             Requested size: 247.16577pt x 192.01637pt.
- [2 <./plots/micro.jpg>] [3 <./plots/convolve.pdf> <./plots/jablonski.png>] [4]
- [5]) (./aufbau.tex
-<plots/aufbau.png, id=87, 437.635pt x 381.26692pt>
+ [3 <./plots/convolve.pdf>] [4 <./plots/jablonski.png>] [5]) [6] (./aufbau.tex 
+<plots/aufbau.png, id=104, 437.635pt x 381.26692pt>
 File: plots/aufbau.png Graphic file (type png)
- <use plots/aufbau.png>
+
+<use plots/aufbau.png>
 Package pdftex.def Info: plots/aufbau.png used on input line 4.
 (pdftex.def)             Requested size: 308.95407pt x 269.16553pt.
-)
-[6 <./plots/aufbau.png>] (./durch.tex
+) (./durch.tex) (./ausw.tex [7 <./plots/aufbau.png>]
 
 Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
  Make it at least 14.89197pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7]) (./ausw.tex [8] <plots/goldbeads.png, id=97, 867.24pt x 1445.4pt>
+[8] <plots/GoldBeads_3d_640nmxywithbar.jpg, id=111, 256.96pt x 256.96pt>
+File: plots/GoldBeads_3d_640nmxywithbar.jpg Graphic file (type jpg)
+
+<use plots/GoldBeads_3d_640nmxywithbar.jpg>
+Package pdftex.def Info: plots/GoldBeads_3d_640nmxywithbar.jpg used on input li
+ne 6.
+(pdftex.def)             Requested size: 123.58289pt x 123.58249pt.
+
+<plots/GoldBeads_3d_640nmxzwithbar.jpg, id=112, 256.96pt x 256.96pt>
+File: plots/GoldBeads_3d_640nmxzwithbar.jpg Graphic file (type jpg)
+
+<use plots/GoldBeads_3d_640nmxzwithbar.jpg>
+Package pdftex.def Info: plots/GoldBeads_3d_640nmxzwithbar.jpg used on input li
+ne 11.
+(pdftex.def)             Requested size: 123.58289pt x 123.58249pt.
+
+<plots/GoldBeads_3d_640nmyzwithbar.jpg, id=113, 256.96pt x 256.96pt>
+File: plots/GoldBeads_3d_640nmyzwithbar.jpg Graphic file (type jpg)
+
+<use plots/GoldBeads_3d_640nmyzwithbar.jpg>
+Package pdftex.def Info: plots/GoldBeads_3d_640nmyzwithbar.jpg used on input li
+ne 16.
+(pdftex.def)             Requested size: 123.58289pt x 123.58249pt.
+ [9 <./plots/GoldBeads_3d_640nmxywithbar.jpg> <./plots/GoldBeads_3d_640nmxzwith
+bar.jpg> <./plots/GoldBeads_3d_640nmyzwithbar.jpg>] <plots/goldbeads.png, id=11
+9, 867.24pt x 1445.4pt>
 File: plots/goldbeads.png Graphic file (type png)
 
 <use plots/goldbeads.png>
-Package pdftex.def Info: plots/goldbeads.png used on input line 30.
+Package pdftex.def Info: plots/goldbeads.png used on input line 49.
 (pdftex.def)             Requested size: 411.93877pt x 233.62413pt.
- [9] [10 <./plots/goldbeads.png>]
-<plots/tiefe.pdf, id=105, 433.62pt x 289.08pt>
+ [10] [11 <./plots/goldbeads.png>]
+<plots/tiefe.pdf, id=128, 433.62pt x 289.08pt>
 File: plots/tiefe.pdf Graphic file (type pdf)
  <use plots/tiefe.pdf>
-Package pdftex.def Info: plots/tiefe.pdf used on input line 88.
+Package pdftex.def Info: plots/tiefe.pdf used on input line 107.
 (pdftex.def)             Requested size: 247.16577pt x 164.7773pt.
- [11]
-<plots/depletion.pdf, id=110, 722.7pt x 505.89pt>
+ [12]
+<plots/depletion.pdf, id=132, 722.7pt x 505.89pt>
 File: plots/depletion.pdf Graphic file (type pdf)
  <use plots/depletion.pdf>
-Package pdftex.def Info: plots/depletion.pdf used on input line 105.
+Package pdftex.def Info: plots/depletion.pdf used on input line 124.
 (pdftex.def)             Requested size: 308.95407pt x 216.27022pt.
 
-Overfull \hbox (1.03944pt too wide) in paragraph at lines 97--113
+Overfull \hbox (1.03944pt too wide) in paragraph at lines 116--132
 \T1/aer/m/n/12 Zu quan-ti-ta-ti-ven Be-schrei-bung der Aus-lö-schung der Fluo-r
 es-zenz durch den STED-
  []
 
-<plots/GoldBeads_3d_775nmxywithbar.jpg, id=111, 256.96pt x 256.96pt>
+<plots/GoldBeads_3d_775nmxywithbar.jpg, id=133, 256.96pt x 256.96pt>
 File: plots/GoldBeads_3d_775nmxywithbar.jpg Graphic file (type jpg)
 
 <use plots/GoldBeads_3d_775nmxywithbar.jpg>
 Package pdftex.def Info: plots/GoldBeads_3d_775nmxywithbar.jpg used on input li
-ne 118.
+ne 137.
 (pdftex.def)             Requested size: 123.58289pt x 123.58249pt.
 
-<plots/GoldBeads_3d_775nmxzwithbar.jpg, id=112, 256.96pt x 256.96pt>
+<plots/GoldBeads_3d_775nmxzwithbar.jpg, id=134, 256.96pt x 256.96pt>
 File: plots/GoldBeads_3d_775nmxzwithbar.jpg Graphic file (type jpg)
 
 <use plots/GoldBeads_3d_775nmxzwithbar.jpg>
 Package pdftex.def Info: plots/GoldBeads_3d_775nmxzwithbar.jpg used on input li
-ne 123.
+ne 142.
 (pdftex.def)             Requested size: 123.58289pt x 123.58249pt.
 
-<plots/GoldBeads_3d_775nmyzwithbar.jpg, id=113, 256.96pt x 256.96pt>
+<plots/GoldBeads_3d_775nmyzwithbar.jpg, id=135, 256.96pt x 256.96pt>
 File: plots/GoldBeads_3d_775nmyzwithbar.jpg Graphic file (type jpg)
 
 <use plots/GoldBeads_3d_775nmyzwithbar.jpg>
 Package pdftex.def Info: plots/GoldBeads_3d_775nmyzwithbar.jpg used on input li
-ne 128.
+ne 147.
 (pdftex.def)             Requested size: 123.58289pt x 123.58249pt.
 
-<plots/doughnut.pdf, id=114, 722.7pt x 505.89pt>
+<plots/doughnut.pdf, id=136, 722.7pt x 505.89pt>
 File: plots/doughnut.pdf Graphic file (type pdf)
  <use plots/doughnut.pdf>
-Package pdftex.def Info: plots/doughnut.pdf used on input line 141.
+Package pdftex.def Info: plots/doughnut.pdf used on input line 160.
 (pdftex.def)             Requested size: 308.95407pt x 216.27022pt.
 
-[12 <./plots/tiefe.pdf>] [13 <./plots/depletion.pdf> <./plots/GoldBeads_3d_775n
+[13 <./plots/tiefe.pdf>] [14 <./plots/depletion.pdf> <./plots/GoldBeads_3d_775n
 mxywithbar.jpg> <./plots/GoldBeads_3d_775nmxzwithbar.jpg> <./plots/GoldBeads_3d
-_775nmyzwithbar.jpg>] <plots/fwhm_zeta.pdf, id=219, 722.7pt x 505.89pt>
+_775nmyzwithbar.jpg>] <plots/fwhm_zeta.pdf, id=239, 722.7pt x 505.89pt>
 File: plots/fwhm_zeta.pdf Graphic file (type pdf)
 
 <use plots/fwhm_zeta.pdf>
-Package pdftex.def Info: plots/fwhm_zeta.pdf used on input line 160.
+Package pdftex.def Info: plots/fwhm_zeta.pdf used on input line 179.
 (pdftex.def)             Requested size: 308.95407pt x 216.27022pt.
 
-<plots/normal_noSTED_measurement_with_bar.jpg, id=220, 2055.68pt x 2055.68pt>
+<plots/normal_noSTED_measurement_with_bar.jpg, id=240, 2055.68pt x 2055.68pt>
 File: plots/normal_noSTED_measurement_with_bar.jpg Graphic file (type jpg)
 
 <use plots/normal_noSTED_measurement_with_bar.jpg>
 Package pdftex.def Info: plots/normal_noSTED_measurement_with_bar.jpg used on i
-nput line 172.
+nput line 191.
 (pdftex.def)             Requested size: 123.58289pt x 123.55504pt.
 
-<plots/normal_onlySTED_measurement_with_bar.jpg, id=221, 2055.68pt x 2055.68pt>
+<plots/normal_onlySTED_measurement_with_bar.jpg, id=241, 2055.68pt x 2055.68pt>
 File: plots/normal_onlySTED_measurement_with_bar.jpg Graphic file (type jpg)
 <use plots/normal_onlySTED_measurement_with_bar.jpg>
 Package pdftex.def Info: plots/normal_onlySTED_measurement_with_bar.jpg used on
- input line 177.
+ input line 196.
 (pdftex.def)             Requested size: 123.58289pt x 123.55504pt.
 
-<plots/normal_STED_measurement_with_bar.jpg, id=222, 2055.68pt x 2055.68pt>
+<plots/normal_STED_measurement_with_bar.jpg, id=242, 2055.68pt x 2055.68pt>
 File: plots/normal_STED_measurement_with_bar.jpg Graphic file (type jpg)
 
 <use plots/normal_STED_measurement_with_bar.jpg>
 Package pdftex.def Info: plots/normal_STED_measurement_with_bar.jpg used on inp
-ut line 182.
+ut line 201.
 (pdftex.def)             Requested size: 123.58289pt x 123.55504pt.
-) (./disk.tex [14 <./plots/doughnut.pdf>] [15 <./plots/fwhm_zeta.pdf>] [16 <./p
-lots/normal_noSTED_measurement_with_bar.jpg> <./plots/normal_onlySTED_measureme
-nt_with_bar.jpg> <./plots/normal_STED_measurement_with_bar.jpg>]) [17] (./maste
-r.bbl) [18] (./appendix.tex
-<plots/goldbeads2.png, id=352, 867.24pt x 1445.4pt>
+) [15 <./plots/doughnut.pdf>]
+[16 <./plots/fwhm_zeta.pdf>] (./disk.tex [17 <./plots/normal_noSTED_measurement
+_with_bar.jpg> <./plots/normal_onlySTED_measurement_with_bar.jpg> <./plots/norm
+al_STED_measurement_with_bar.jpg>]) [18] (./master.bbl) [19] (./appendix.tex
+<plots/goldbeads2.png, id=372, 867.24pt x 1445.4pt>
 File: plots/goldbeads2.png Graphic file (type png)
  <use plots/goldbeads2.png>
 Package pdftex.def Info: plots/goldbeads2.png used on input line 5.
 (pdftex.def)             Requested size: 411.93877pt x 233.62413pt.
-) [19 <./plots/goldbeads2.png>] (./master.aux)
+) [20 <./plots/goldbeads2.png>] (./master.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5490 strings out of 494948
- 78130 string characters out of 6178809
+ 5500 strings out of 494948
+ 78753 string characters out of 6178809
  153592 words of memory out of 5000000
- 8528 multiletter control sequences out of 15000+600000
- 39846 words of font info for 85 fonts, out of 8000000 for 9000
+ 8546 multiletter control sequences out of 15000+600000
+ 38351 words of font info for 84 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  42i,12n,43p,787b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
@@ -778,10 +793,10 @@ amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on master.pdf (21 pages, 2367470 bytes).
+Output written on master.pdf (23 pages, 2446702 bytes).
 PDF statistics:
- 399 PDF objects out of 1000 (max. 8388607)
- 150 compressed objects within 2 object streams
+ 419 PDF objects out of 1000 (max. 8388607)
+ 161 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

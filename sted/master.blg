@@ -3,47 +3,53 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: master.aux
 The style file: plain.bst
 Database file #1: master.bib
+Warning--entry type for "mosaic" isn't style-file defined
+--line 50 of file master.bib
+Warning--entry type for "imagej" isn't style-file defined
+--line 54 of file master.bib
 Warning--I didn't find a database entry for "Dem2"
+Warning--to sort, need author or key in imagej
+Warning--to sort, need author or key in mosaic
 Warning--empty title in Born
-You've used 6 entries,
+You've used 8 entries,
             2118 wiz_defined-function locations,
-            538 strings with 4572 characters,
-and the built_in function-call counts, 1504 in all, are:
-= -- 143
-> -- 54
+            542 strings with 4633 characters,
+and the built_in function-call counts, 1800 in all, are:
+= -- 167
+> -- 56
 < -- 0
-+ -- 22
++ -- 24
 - -- 16
-* -- 87
-:= -- 270
-add.period$ -- 18
-call.type$ -- 6
-change.case$ -- 26
+* -- 97
+:= -- 298
+add.period$ -- 20
+call.type$ -- 8
+change.case$ -- 32
 chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 71
-empty$ -- 136
+cite$ -- 11
+duplicate$ -- 85
+empty$ -- 182
 format.name$ -- 16
-if$ -- 313
+if$ -- 387
 int.to.chr$ -- 0
-int.to.str$ -- 6
+int.to.str$ -- 8
 missing$ -- 8
-newline$ -- 32
+newline$ -- 38
 num.names$ -- 12
-pop$ -- 33
+pop$ -- 49
 preamble$ -- 1
-purify$ -- 20
+purify$ -- 24
 quote$ -- 0
-skip$ -- 39
+skip$ -- 59
 stack$ -- 0
-substring$ -- 54
-swap$ -- 6
+substring$ -- 64
+swap$ -- 8
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 20
-warning$ -- 1
+type$ -- 28
+warning$ -- 3
 while$ -- 14
-width$ -- 7
-write$ -- 66
-(There were 2 warnings)
+width$ -- 9
+write$ -- 76
+(There were 6 warnings)

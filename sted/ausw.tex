@@ -1,11 +1,29 @@
 \section{Auswertung}
 \subsection{Messung der PSF}
-Zur Bestimmung der Form der PSF werden Aufnahmen, der xy-, xz, und yz-Ebene der Golbeads verwendet. 
+\begin{figure}
+	\centering
+	\begin{subfigure}{0.3\textwidth}
+		\includegraphics[width=\textwidth]{plots/GoldBeads_3d_640nmxywithbar.jpg}
+		\caption{$xy$-Ebene.}
+	\end{subfigure}
+	~
+	\begin{subfigure}{0.3\textwidth}
+		\includegraphics[width=\textwidth]{plots/GoldBeads_3d_640nmxzwithbar.jpg}
+		\caption{$xz$-Ebene.}
+	\end{subfigure}
+	~
+	\begin{subfigure}{0.3\textwidth}
+		\includegraphics[width=\textwidth]{plots/GoldBeads_3d_640nmyzwithbar.jpg}
+		\caption{$yz$-Ebene.}
+	\end{subfigure}
+	\caption{PSF des Anregungslasers (640~nm). Beleuchtet wird ein Goldkügelchen mit einem Durchmesser von ca. 80~nm.}\label{fig:goldbeadpic}
+\end{figure}
+Zur Bestimmung der Form der PSF werden Aufnahmen, der xy-, xz, und yz-Ebene der Goldbeads verwendet. 
 Dabei wird jeweils die Ausdehnung des Bildes in x-,y- und z-Richtung bestimmt.
 Da die Goldkügelchen in erster Näherung als rund angenommen werden können, ist die Form der PSF theoretisch bekannt.
 Das Interferenzmuster kann angenähert werden durch die Funktion (\ref{eq:psfapprox}):
 \begin{align}
-	f(x)=I_0 \cdot \exp \left( -k \cdot x^2 \right) \cdot \cos \left(-\omega\cdot x\right). \label{eq:psfapprox}
+	f(x)=I_0 \cdot \exp \left( -k \cdot x^2 \right) \cdot \cos^2 \left(-\omega\cdot x\right). \label{eq:psfapprox}
 \end{align}
 \\ 
 Die Ausdehnung der Airyscheibe entspricht nach dem Rayleigh-Kriterium dem Abstand der beiden ersten Minima voneinander. 
@@ -13,8 +31,9 @@ Durch (\ref{eq:psfapprox}) ist der Abstand des ersten Minimums vom ersten Maximu
 \begin{align}
 x_{min} = \frac{\pi}{2}\omega.
 \end{align}
-Die PSF wird mit ImageJ vermessen indem das Profil entlang der jeweiligen Achse durch das Maximum bestimmt wird.
-In Abb. \ref{fig:psffits} sind die alle Vermessungen der PSF zu sehen. In Tab. \ref{tab:psffits} sind die durch nonlinear-regression bestimmten Werte aufgetragen, der Fehler ergibt sich aus der bei der Regression auftretenden Standartabweichung.
+Die PSF wird mit ImageJ \cite{imagej} vermessen, indem das Profil entlang der jeweiligen Achse durch das Maximum bestimmt wird.
+In Abb. \ref{fig:psffits} sind die alle Vermessungen der PSF zu sehen. 
+In Tab. \ref{tab:psffits} sind die durch nonlinear-regression bestimmten Werte aufgetragen, der Fehler ergibt sich aus der bei der Regression auftretenden Standartabweichung.
 \\
 Die aus dem Aufbau nach (\ref{eq:rayleigh}) bestimmte Airyscheibe hat einen Durchmesser von 557.7~nm für eine Wellenlänge von 640~nm und 675.4~nm für eine Wellenlänge von 775~nm.
 \\
@@ -53,7 +72,7 @@ Bei der $\lambda = 775$~nm Messung hat nur ein Fit ein sinnvolles Ergebnis erzie
 \end{table}
 \begin{table}
 \centering
-\caption{Durch einen Fit mit einer Gaußfunktion bestimmte Werte für die FWHM des Anregungs- und STED-Lasers. Gezeigt ist der gewichtete Mittelwert, mit einem Fehler der sich aus der Regression ergibt.}\label{tab:psffwhm}
+\caption{Durch einen Fit mit einer Gaußfunktion bestimmte Werte für die FWHM des Anregungs- und STED-Lasers. Gezeigt ist der gewichtete Mittelwert, mit einem Fehler, der sich aus der Regression ergibt.}\label{tab:psffwhm}
 \begin{tabular}{l|l|c}
 	Wellenlänge [nm]& Achse & FWHM [nm] \\ \hline
 	   &x&244.3(6)\\
@@ -77,7 +96,7 @@ Bei der $\lambda = 775$~nm Messung hat nur ein Fit ein sinnvolles Ergebnis erzie
 \subsection{Tiefendiskriminierung}
 In Abb. \ref{fig:tiefe} ist der Intensitätsverlauf in Abhängigkeit von der $z$-Achse entlang der Farbfilmprobe dargestellt.
 Die Tiefendiskriminierung kann durch die Breite des Intensitätsabfalls abgeschätzt werden.
-Weil das Plateau der maximalen Intensität nicht exakt konstant ist wurde für den maximalen Wert der Mittellwert des Plateaus gebildet.
+Weil das Plateau der maximalen Intensität nicht exakt konstant ist, wurde für den maximalen Wert der Mittellwert des Plateaus gebildet.
 Dafür wurde in Abb. \ref{fig:tiefe} nur der Bereich zwischen den eingezeichneten roten Linien benutzt.
 Die Tiefendiskriminierung entspricht in etwa der Länge nach dem die Intensität auf die Hälfte ihres ursprünglichen Wertes abgefallen ist.
 In der Abbildung ist dies der Abstand des rechten Randes des Plateaus zur vertikalen gelben Linie.
@@ -144,7 +163,7 @@ Die Differenz zwischen Maximum und Minimum beträgt ca. 38~\% der maximalen Inte
 	\label{fig:doughnut}
 \end{figure}
 \\ 
-Die Auflösung der STED-Mikroskopie wird unter Verwendung des ImageJ Plugins \emph{MosaicSuite} und der darin befindlichen Funktion PSF-Tool bestimmt.\\
+Die Auflösung der STED-Mikroskopie wird unter Verwendung des ImageJ Plugins \emph{MosaicSuite} \cite{mosaic} und der darin befindlichen Funktion PSF-Tool bestimmt.\\
 Dieses Werkzeug erlaubt die Bestimmung der FWHM einer Aufnahme oder eines gesamten Aufbaus, durch die Berechnung der PSF, die durch einzelne isolierte Punkte erzeugt wird.
 Die verwendeten Parameter für das PSF-Tool sind ein Sampling-Radius von 30~px und eine Pixelgröße von 1~$\mu$m.
 Die PSFs mehrerer Nanopartikel wird dann gemittelt und daraus der Mittelwert der FWHMs bestimmt.
