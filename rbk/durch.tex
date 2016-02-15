@@ -1,0 +1,34 @@
+\section{Durchführung}
+Das Phänomen der Rayleigh-Benard-Konvektion wird sowohl numerisch als auch experimentell untersucht.
+\subsection{Simulation}
+Mithilfe des Programms \emph{Comsol Multiphysics} wird die Rayleigh-Benard-Konvektion in einer zweidimensionalen Box simuliert. 
+Die Simulation wird für die Rayleigh-Zahlen $10^3, 10^4, 10^5$ und $10^6$ durchgeführt. 
+Ausgegeben werden dabei die Temperatur- und Geschwindigkeitsprofile entlang der Achse durch die Mitte der Box.
+\\
+Zudem wird die Nusselt-Zahl als das Integral des Wärmegradienten über die Grenzfläche der Box bestimmt.
+
+\subsection{Experimentelle Betrachtung}
+\subsubsection{Schattenwurfmethode}
+Zunächst wird die Dynamik des Fluids im Versuchsaufbau, visuell beschrieben.
+Dazu wird die Glasbox so beleuchtet, dass auf einer Seite durch die Plumes erzeugte Schatten zu erkennen sind.
+Die Schatten entstehen durch die Brechung des Lichts an starken Dichtegradienten des Fluids, die Folge von Temperaturunterschieden sind.
+\\
+Die Geschwindigkeit der Plumes wird mithilfe einer Stoppuhr gemessen. 
+Es werden sowohl auf einer Seite aufsteigende warme Plumes, als auch auf der anderen Seite fallende kalte Plumes gemessen.
+\\
+Die Strecke über die gemessen wird beträgt ca. 2.5~cm. Für jede Seite werden 10 Messwerte gesammelt.
+\subsubsection{Beweglicher Thermistor}
+Das Temperatur- und Geschwindigkeitsprofil des Fluids wird nun mit einem einzelnen Thermistor bestimmt.
+Der Thermistor wird zunächst direkt an der warmen Platte in der Mitte der Box positioniert. 
+Mit einem bereitgestellten Messprogramm werden nun 2048 Messwerte der Temperatur mit einer Abtastfrequenz von 9.5~Hz auf genommen. 
+\\ 
+Dann wird der Thermistor um 1~cm nach oben verschoben, und eine Messung für die neue Höhe gestartet. Dies wird bis zu einer Höhe von 10~cm durchgeführt.
+\\
+Für die ersten 1.5~cm werden die Messungen alle 0.1~cm durchgeführt. 
+Für die Bestimmung der thermischen Grenzschicht wird zudem eine noch höhere Auflösung benötigt, weswegen zusätzliche Messwerte bei 0.05, 0.15, 0.25 und 0.35~cm aufgenommen werden, die allerdings nur aus 512 Messpunkten bestehen.
+
+\subsubsection{Thermistorarray}
+Anschließend wird eine lange Messung mit einem Thermistorarray aus sechs Thermistoren durchgeführt.
+Mit allen Thermistoren wird über 30~Stunden hinweg die Temperatur gemessen.
+Aus der zeitlichen Korrelation der Messwerte der einzelnen Thermistoren lässt sich die Geschwindigkeit von Plumes bestimmen.
+
