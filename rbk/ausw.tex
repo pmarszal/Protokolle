@@ -66,7 +66,7 @@ In \cref{fig:abbruch} ist eindeutig die größte Frequenz des Plume-Bündels zu 
 \\
 Das Geschwindigkeitsprofil der unteren \SI{10}{\centi\meter} ist in in \cref{fig:vprof_freq} zu sehen. 
 Das Profil der Abbruchfrequenzen $f_c$ entspricht hier dem Verlauf des Geschwindigkeitsprofils.
-Der lineare Fit der ersten Werte zeigt, dass selbst an der Heizplatte eine Geschwindigkeit zu Messen ist.
+Der lineare Fit der ersten Werte zeigt, dass selbst an der Heizplatte eine Geschwindigkeit messbar ist.
 \\
 \begin{figure}
 	\input{Figures/power_0000}\caption{Ermittlung der Abbruchfrequenz einer Messung. Dieses Beispiel zeigt die Bestimmung der Abbruchfrequenz für die Messung der Temperatur in unmittelbarer Nähe der Platte. }\label{fig:abbruch}
@@ -75,8 +75,16 @@ Der lineare Fit der ersten Werte zeigt, dass selbst an der Heizplatte eine Gesch
 	\input{Figures/v_prof_fc}\caption{Zu sehen ist die Abhängigkeit der Abbruchfrequenz $f_c$ in Abhängigkeit von dem Abstand von der Heizplatte. Dieser Verlauf entspricht auch dem Geschwindigkeitsprofil in der Zelle, da die Geschwindigkeit proportional zur Abbruchfrequenz ist.}\label{fig:vprof_freq}
 \end{figure}
 Aus der 30-stündigen Messung lässt sich die Geschwindigkeit an fünf Stellen der Zelle bestimmen. Dazu wird aus den Temperaturmesswerten die Korrelation jeweils zweier Thermistoren gebildet.
-Die Zeit $\tau$ des Maximums einer Korrelation entspricht der mittleren Zeit, die ein Plume braucht um von einem Thermistor zum anderen zu 
-
+Die Zeit $\tau$ des Maximums einer Korrelation entspricht der mittleren Zeit, die ein Plume braucht um von einem Thermistor zum anderen zu fließen.
+Mit dieser Zeit und dem Abstand zwischen der betrachteten Thermistoren lässt sich die Geschwindigkeit zwischen diesen bestimmen.
+In \cref{fig:korr} sind die Korrelationen zwischen jeweils benachbarten Thermistoren zu sehen. Aus den Maxima der Korrelationen ergeben sich die mittleren Geschwindigkeiten in \cref{fig:v_korr}.
+\\
+\begin{figure}
+	\input{Figures/v_correlation_12}\caption{Korrelation benachbarter Thermistoren. Die Zeit der Maximums entspricht der Zeit, die ein Plume im Mittel braucht um die Strecke zwischen den Thermistoren zu überwinden. Zwischen dritten und viertem Thermistor liegt das Maximum bei einer größeren Zeit als erwartet, da der Abstand des dritten und vierten Thermistors größer ist.}\label{fig:korr}
+\end{figure}
+\begin{figure}
+	\input{Figures/vel_corr_therm}\caption{Aus den Korrelationen bestimmte Werte für die Geschwindigkeit in Abhängigkeit vom Abstand von der Kühlplatte. Das erwartete Profil mit Minimum in der Mitte, wie in \cref{fig:vprof_sim} ist nicht zu erkennen.}\label{fig:v_korr}
+\end{figure}
 
 %\begin{figure}
 %
