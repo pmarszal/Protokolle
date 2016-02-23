@@ -1,0 +1,13 @@
+main.tex
+power_0000.tex
+power_250.tex
+ra_vs_nu.tex
+test.tex
+v_correlation_12.tex
+vel_corr_therm.tex
+v_prof_fc.tex
+v_prof_Ra_1e3.tex
+v_prof_Ra_1e4.tex
+v_prof_Ra_1e5.tex
+v_prof_Ra_1e6.tex
+v_prof_Ra_1e7.tex

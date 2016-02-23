@@ -1,5 +1,93 @@
 \section{Auswertung}
+\subsection{Schattenspiel}
+Die Temperaturen der Heiz- und Kühlplatte wurden zu \SI{11.05}{\celsius} und \SI{19.84}{\celsius} bestimmt. Daraus und aus den Abmessungen der Zelle wird die Rayleighzahl nach \cref{eq:rayleigh} zu ca. $\text{Ra} = 1.01\cdot 10^{9}$ bestimmt.
+\\
+Die Messung der Geschwindigkeiten der Plume-Schatten ergibt für aufsteigende Plumes \SI{0.50\pm0.01}{\centi\meter\per\second}, und für fallende Plumes ergibt sich eine mittlere Geschwindigkeit von \SI{0.71\pm0.02}{\centi\meter\per\second}.
+Für die Berechnung der Reynoldszahl wird nur die Messung für die aufsteigenden Plumes herangezogen, da es bei der Messung der fallenden Plumes zu einem systematischen Fehler durch die Fokusebene der Beleuchtung kommt. Es ergibt sich eine Reynoldszahl von $\text{Re}=10^{3}$.
+\\ % Aufgabe 15 
 
+\subsection{Vorbereitung: Thermistor}
+Da Geschwindigkeit der Plumes über eine Fouriertransformation der gemessenen Temperatur bestimmt wird, können Fehler in der Messung durch den Einfluss von Störfrequenzen auf die Thermistoren auftreten.
+Um mögliche Störfrequenzen zu identifizieren, wird zunächst eine Messung mit einer Abtastfrequenz von \SI{250}{\hertz} durchgeführt. 
+Diese kann Störfrequenzen von 0 bis \SI{250}{\hertz} aufdecken.
+\\
+Eine starke, wenn auch zu erwartende, Störung tritt bei \SI{50}{\hertz} auf, und wird durch das Stromnetz verursacht (siehe \cref{fig:stoer}).
+Durch \cref{eq:frequency} kann nun eine Abtastfrequenz gewählt werden, die das Auftreten der Störfrequenz in der Messung so verschiebt, dass die Messergebnisse unbeeinflusst bleiben. Deswegen wurde die Abtastfrequenz als \SI{11.5}{\hertz} gewählt.
+\begin{align}
+	|f_{\text{real}}- f_{\text{measured}} | = \lfloor\frac{f_{\text{real}}}{f_{\text{max}}}\rfloor \cdot f_{\text{max}}. \label{eq:frequency}
+\end{align}
+\begin{figure}
+	\input{Figures/power_250}\caption{Ergebnis der Suche nach Störfrequenzen mit einer Abtastrate von \SI{250}{\hertz}. Die einzige erkennbare Störfrequenz liegt bei \SI{50}{\hertz} und wird durch das Stromnetz verursacht.}\label{fig:stoer}
+\end{figure}
+\\
+
+\subsection{Temperaturmessungen}
+Aus den Messungen der Temperatur als Funktion des Abstandes ergibt sich das in \cref{fig:temp-prof} dargestellte Temperaturprofil. Es ist sowohl das Ergebnis der Messung mit dem beweglichen Thermistor, als auch die Messung der Temperatur mit dem Thermistor-Array zu sehen. 
+\cref{fig:temp-array} hingegen zeigt allein die Messung mit dem Thermistorarry.
+\\
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{plots/T_profile2.pdf}
+\caption{Temperaturprofil der unteren Hälfte der Zelle, als Funktion des Abstandes von der Heizplatte. Zu sehen ist die vollständige Messreihe mittels beweglichem Thermistor, und die ersten drei Messwerte des Thermistorarrays.
+Zur Bestimmung der thermischen Grenzschicht wurde der Schnittpunkt zweier linearer Fits bestimmt.}\label{fig:temp-prof}
+\end{figure}
+Aus dem Temperaturprofil lässt sich die Nusseltzahl, über die thermische Grenzschicht bestimmen. Der bestimmte Schnittpunkt der beiden in \cref{fig:temp-prof} zu sehenden Fits liegt bei einem Abstand von \SI{0.25\pm0.4}{\centi\meter}. Nach \cref{eq:nusselt} ergibt sich dies zu einer Nusseltzahl von $\text{Nu}=\SI{40\pm7}{}$.
+\\
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{plots/T_korr_profile.pdf}
+	\caption{Messungen des Temperaturprofils mithilfe des Thermistorarrays. Zu sehen sind die Mittelwerte der 30-stündigen Messung, für jeden Thermistor bzw. seine Position.}\label{fig:temp-array}
+\end{figure}
+Die in \cref{fig:temp-prof, fig:temp-array} dargestellten Profile lassen sich mit den aus der Simulation gewonnenen Profilen für unterschiedliche Rayleighzahlen vergleichen.
+Diese sind in \cref{fig:sim-temp} dargestellt.
+\\
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{plots/T_sim_Profile.pdf}
+	\caption{Temperaturprofile einer Rayleigh-Benard-Zelle zu verschiedenen Rayleighzahlen.}\label{fig:sim-temp}
+\end{figure}
+Für die 30-stündige Messung ist es interessant die Verteilung der Messwerte zu betrachten. \cref{fig:hist} zeigt Histogramme der gemessenen Werte über die gesamte Messreihe hinweg. Man erkennt, dass das Maximum der Verteilungen für jeden Thermistor in etwa bei der gleichen Temperatur \SI{15.5}{\celsius} liegt. 
+Allerdings kommt es durch die Nähe zur Heiz- bzw. Kühlplatte zu häufigen Messung von Temperaturen mit einer starken Abweichung vom Maximum.
+Der Thermistor in der Nähe der Heizplatte misst häufiger Temperaturen über der Durchschnittstemperatur, während beim Thermistor an der Kühlplatte häufiger niederigere Temperaturen gemessen werden.
+Dieser Effekt lässt sich abgeschwächt auch in den weiter entfernten Thermistoren erkennen.
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{plots/T_hist.pdf}\caption{Verteilung der Messwerte der einzelnen Thermistoren als Funktion der Temperatur. Der Abstand bezeichnet den Abstand von der Heizplatte. Die Histogramme sind auf einer logarithmischen Skala aufgetragen. Bei den Lücken in den Histogrammen, handelt es sich um Fehler, die Messwerte aus diesen Boxen auf die benachbarten Boxen verteilen.}\label{fig:hist}
+\end{figure}
+
+\subsection{Geschwindigkeitsprofile}
+Über die Messung der Temperatur mit dem beweglichen Thermistor lässt sich das Geschwindigkeitsprofil der Zelle ermitteln.
+Dazu wird ausgenutzt, dass entstehende Plumes in etwa dem Verlauf der Konvektionswalze folgen, und in erster Näherung die gleiche Geschwindigkeit besitzen.
+\\
+In der mit dem Thermistor an einer Höhe aufgenommenen Zeitreihe sind Plumes als ein vorübergehender Anstieg bzw. Abfall der Temperatur zu erkennen. 
+Die Geschwindigkeit des Plumes ist invers proportional zur Breite der Senke bzw. des Hügels.
+Diese ist wiederum charakterisiert, durch die Frequenzzusammensetzung des Plumes im Fourierraum.
+In \cref{fig:abbruch} ist eindeutig die größte Frequenz des Plume-Bündels zu erkennen. Diese Abbruchfrequenz ist direkt proportional zur durchschnittlichen Geschwindigkeit der Plumes in diesem Abstand von der Heizplatte.
+\\
+Das Geschwindigkeitsprofil der unteren \SI{10}{\centi\meter} ist in in \cref{fig:vprof_freq} zu sehen. 
+Das Profil der Abbruchfrequenzen $f_c$ entspricht hier dem Verlauf des Geschwindigkeitsprofils.
+Der lineare Fit der ersten Werte zeigt, dass selbst an der Heizplatte eine Geschwindigkeit zu Messen ist.
+\\
+\begin{figure}
+	\input{Figures/power_0000}\caption{Ermittlung der Abbruchfrequenz einer Messung. Dieses Beispiel zeigt die Bestimmung der Abbruchfrequenz für die Messung der Temperatur in unmittelbarer Nähe der Platte. }\label{fig:abbruch}
+\end{figure}
+\begin{figure}
+	\input{Figures/v_prof_fc}\caption{Zu sehen ist die Abhängigkeit der Abbruchfrequenz $f_c$ in Abhängigkeit von dem Abstand von der Heizplatte. Dieser Verlauf entspricht auch dem Geschwindigkeitsprofil in der Zelle, da die Geschwindigkeit proportional zur Abbruchfrequenz ist.}\label{fig:vprof_freq}
+\end{figure}
+Aus der 30-stündigen Messung lässt sich die Geschwindigkeit an fünf Stellen der Zelle bestimmen. Dazu wird aus den Temperaturmesswerten die Korrelation jeweils zweier Thermistoren gebildet.
+Die Zeit $\tau$ des Maximums einer Korrelation entspricht der mittleren Zeit, die ein Plume braucht um von einem Thermistor zum anderen zu 
+
+
+%\begin{figure}
+%
+%\end{figure}
+\input{multiplot}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% critical rayleigh number 1707
+% wikipedia rayleigh benard
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %	 RAYLEIGH ZAHL DES EXPERIMENTS
