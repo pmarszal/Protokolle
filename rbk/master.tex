@@ -1,21 +1,16 @@
 \documentclass[a4paper, 12pt]{article}
-
 \usepackage{a4,amssymb,color,graphicx}
-
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{ae,aecompl}
 \usepackage[utf8]{inputenc}
-%zum kuerzen
 \usepackage{cancel}
-%\usepackage{wrapfig}
 \usepackage{fancyvrb}
 \usepackage{amsmath}
 \usepackage{amstext}
 \usepackage{epstopdf}
 \usepackage[title, titletoc, toc]{appendix}
 \usepackage{placeins}
-%huebsche kopfzeilen
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhead[C]{}
@@ -25,20 +20,32 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 \textheight=580pt
-
-
-%caption centern
 \usepackage{ccaption}
 \captionstyle{\centerlastline}
-%Unterobjekte
 \usepackage{subcaption}
-
-\newcommand{\mensch}[1]{\textsc{#1}}	% Wichtige Physiker
 \newcommand{\D}{\mbox{d}}				% Fuer gerade d in dx/dy
 \newcommand{\VE}{\boldsymbol} %Für fette Vektoren
+\usepackage{transparent}
+\usepackage{setspace}
+\usepackage{siunitx}
+\sisetup{locale=DE}
+\usepackage{floatrow}
+\floatsetup[table]{capposition=top}
+\usepackage[labelfont=bf]{caption}
+\usepackage[numbers,comma,sort&compress]{natbib}
+\bibliographystyle{plain}
 
-%%Vor dem drucken unbedignt auskommentieren -> reine bildschirmschrift - liest sich besser ;)
-%\renewcommand{\familydefault}{phv}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\renewcommand{\vec}{\boldsymbol}
+\newcommand{\dd}{\textnormal{d}}
+\newcommand{\Ta}{\textnormal{Ta}}
+\newcommand{\Ra}{\textnormal{Ra}}
+\newcommand{\Pra}{\textnormal{Pr}}
+\newcommand{\Nu}{\textnormal{Nu}}
+
+
+
 \begin{document}
 
  \begin{titlepage}

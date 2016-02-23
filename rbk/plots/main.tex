@@ -1,0 +1,110 @@
+\documentclass[12pt, a4paper, titlepage, ngerman]{article}
+\usepackage[paper=a4paper,top=25mm]{geometry}
+\usepackage{placeins}
+\usepackage[utf8]{inputenc}
+%\usepackage[english]{babel}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\graphicspath{{Figures/}{../Figures/}}
+\usepackage{transparent}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{siunitx}
+\sisetup{locale=DE}
+\usepackage{floatrow}
+\floatsetup[table]{capposition=top}
+\usepackage[labelfont=bf]{caption}
+\usepackage{subcaption}
+% Bibliography
+\usepackage[numbers,comma,sort&compress]{natbib}
+\bibliographystyle{apsrev4-1}
+
+
+%Kopf-Fußzeilen
+%\usepackage[komastyle]{scrpage2}
+%Math-Mode
+\usepackage[linewidth=1pt]{mdframed}
+\usepackage{amsfonts,amstext,amsmath}
+% Clickable URLs and references
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage[color=red,prependcaption,textsize=tiny]{todonotes}
+\renewcommand{\vec}{\boldsymbol}
+\newcommand{\dd}{\textnormal{d}}
+\newcommand{\Ta}{\textnormal{Ta}}
+\newcommand{\Ra}{\textnormal{Ra}}
+\newcommand{\Pra}{\textnormal{Pr}}
+\newcommand{\Nu}{\textnormal{Nu}}
+\begin{document}
+
+
+\begin{titlepage}
+\thispagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{
+\includegraphics[height=1.4cm]{../../Uni-Goettingen-Logo}}
+%\fancyhead[R]{
+%\includegraphics[height=1.55cm]{../../Max-Planck-Gesellschaft}}
+
+%\begin{minipage}{0.4\textwidth}
+%\includegraphics[width=1.5\textwidth]{../../Uni-Goettingen-Logo}
+%\end{minipage}
+%\hfill
+%\begin{minipage}{0.4\textwidth}
+%\flushright
+%\includegraphics[width=.45\textwidth]{../../Max-Planck-Gesellschaft}
+%\end{minipage}
+
+\doublespacing
+\vspace*{1.1cm}
+\centering
+\textsc{\large Master Forschungspraktikum Physik \\Universität Göttingen}
+
+\vspace*{0.6cm}
+\rule{\textwidth}{1pt}\\[0.5cm]
+{\huge \bfseries
+        Rayleigh-B\'{e}nard-Konvektion\\[1.5ex]
+}
+\rule{\textwidth}{1pt}
+\large{Vitali Telezki \\ vitali.telezki@stud.uni-goettingen.de}
+\vspace*{1.1cm}
+\begin{table}[h]
+\begin{flushleft}
+\begin{tabular}{ll}
+        Betreuer(in): & Matthias Kellner\\
+        Datum Versuchsdurchführung: & 03.02.2016 \\
+        Datum Abgabe: & 19.02.2016\\
+\end{tabular}
+\end{flushleft}
+\end{table}
+
+{\bfseries Testat}
+\begin{table}[h]
+\begin{flushleft}
+\begin{tabular}{ll}
+        Prüfer(in): & \\ \\
+        Datum: & \\ \\
+        Punktezahl:&\\ \\
+        Unterschrift: &
+\end{tabular}
+\end{flushleft}
+\end{table}
+
+
+\end{titlepage}
+
+\tableofcontents
+\newpage
+\doublespacing
+\input{introduction}
+\input{theory}
+%\input{setup}
+\input{results}
+%\FloatBarrier
+\input{discussion}
+\FloatBarrier
+\appendix
+\bibliography{../../bibliography}
+\end{document}
+
