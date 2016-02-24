@@ -2,20 +2,10 @@
 Rayleigh-B\'enard-Konvektion ist eine Form von Konvektion, die durch einen Dichtegradienten und Gravitation verursacht wird. 
 Sie tritt zum Beispiel auf wenn eine Flüssigkeit von unten erhitzt wird, wie es in einem Kochtopf der Fall ist. 
 Der Temperaturgradient führt zu Dichteunterschieden im Fluid. Durch diese und die Gravitation wird wärmeres Fluid durch die Auftriebskraft nach oben gedrückt, während kaltes Fluid aus dem selben Grund nach unten sinkt.
-Oben angekommen kühlt das warme Fluid ab, und sinkt wieder nach unten. Das Zusammenspiel von steigendem und sinkendem Fluid, führt zur Entstehung von sogenannten Konvektionswalzen (auch \emph{large scale circulations}). Diese Konvektionswalzen führen zu einer Durchmischung der Flüssigkeit und damit zu einer homogenen Temperatur im inneren der Walze. Der schematische Temperaturverlauf ist in \cref{fig:scheme_t} zu sehen.
+Oben angekommen kühlt das warme Fluid ab, und sinkt wieder nach unten. Das Zusammenspiel von steigendem und sinkendem Fluid, führt zur Entstehung von sogenannten Konvektionswalzen (auch \emph{large scale circulations}). Diese Konvektionswalzen führen zu einer Durchmischung der Flüssigkeit und damit zu einer homogenen Temperatur im inneren der Walze.
 Sie können abhängig von Randbedingungen, wie der Form des Gefäßes indem sich das Fluid befindet, unterschiedliche Strukturen bilden wie z.B. rechteckige und hexagonale Prismen und Spiralen.
 \\
 Neben den Walzen der Rayleigh-B\'enard-Konvektion treten auch sogenannte \emph{Plumes} auf. Dabei handelt es sich um lokale Wolken, die eine von ihrer unmittelbaren Umgenung verschiedene Temperatur haben. 
-
-\begin{figure}
-\begin{subfigure}{0.45\textwidth}
-	\input{Figures/temp_profile}\caption{Theoretisch erwartetes Temperaturprofil in einer Konvektionswalze. Gestrichelt: Temperaturprofil bei diffusiven Wärmetransport.}\label{fig:scheme_t}
-\end{subfigure}
-\hspace{1cm}
-\begin{subfigure}{0.45\textwidth}
-	\input{Figures/vel_profile}\caption{Theoretisch erwartetes Geschwindigkeitsprofil in einer Konvektionswalze.}\label{fig:scheme_v}
-\end{subfigure}
-\end{figure}
 
 \subsection{Fluidmechanik und Wärmetransport}
 Grundlage für die theroretische Beschreibung der Rayleigh-B\'enard-Konvektion ist die Navier-Stokes-Gleichung. Sie beschreibt das Geschwindigkeitsfeld $\VE v$ eines Fluides unter der Wirkung von Druck-, Reibungs- und -unter Umständen- externer Kraft.
@@ -40,30 +30,5 @@ ergeben. Mit Erdbeschleunigung $g$, Temperaturunterschied $\Delta T = T-T_0$, ch
 Wie man bereits aus \cref{eq:prandtl} entnehmen kann, beschreibt die Prandtlzahl das Verhältnis von Viskosität zu Diffusivität. Die Rayleighzahl gibt Aussage darüber ob der Wärmetransport in einem Fluid diffusiv oder konvektiv erfolgt. Unterhalb einer kritischen Rayleighzahl $\text{Ra}_{crit}$ findet der Wärmetransport nur durch Diffusion statt. Für diesen Versuch ergibt sich etwa ein Wert von $\text{Ra}_{crit} = 1700$ \cite{Racrit}.
 Ein kurzer Überblick der Kennzahlen für Systeme in denen Konvektion stattfindet ist in \cref{tab:rayl} zu sehen.
 \\
-\begin{table}[!h]
-        \centering
-        \begin{tabular}{l|llll}
-                & Erdkern & Erdmantel & Atmosphäre &Zelle \\ \hline
-                $\Ra$&   \num{1.0e31}&\num{2.3e7} &\num{2.4e22}&\num{1.1e9}           \\
-                $\Pr$&   \num{2.7e-2} &\num{1.2e23}&\num{5.7e-1} &\num{7.0} 
-	\end{tabular}
-\caption{Typische Rayleigh- und Prandtl-Zahlen im Vergleich. Da das Innere des Erdkerns fest
-ist, kann nur im äußeren Erdkern RBK stattfinden. Bei der Atmosphäre gibt es lediglich
-in der Troposphäre den für RBK erforderlichen Temperaturverlauf.
-Stoffkonstanten dargestellt in~\cref{ch:appendix}. }
-\label{tab:TypNumbers}
-\end{table}
-Neben der Navier-Stokes-Gleichung spielen die Kontinuitätsgleichung und die Wärmetransportgleichung eine Rolle für die Realisierung der Rayleigh-B\'enard-Konvektion in diesem Versuch. 
-Wird die Konvektion durch einen Temperaturunterschied verursacht, und nicht etwa einen chemischen Gradienten, so lässt sich die Konvektion anhand einer weiteren Kennzahl klassifizieren. Die Nusseltzahl beschreibt das Verhältnis des gesamten Wärmetransports zum rein diffusiven Transport eines ruhenden Fluids \cref{eq:nus_inte}.
-\begin{align}
-	\text{Nu}= \frac{\text{gesamter Wärmetransport}}{\text{idealer diffusiver Transport}}. \label{eq:nus_inte}
-\end{align}
-Der gesamte Wärmetransport entspricht dem Integral des Wärmestroms über die Grenzen des betrachteten Volumens. 
-Für einen hauptsächlich advektiven Wärmetransport lässt sich die Nusseltzahl auch  mit \cref{eq:nus_grenz} bestimmen.
-\begin{align}
-	\text{Nu} = \frac{L}{2\delta} .\label{eq:nus_grenz}
-\end{align}
-Hierbei bezeichnet $\delta$ die Dicke der thermischen Grenzschicht. Diese ist definiert als das Regime des diffusiven Wärmetransports in unmittelbarer Nähe des Randes der Konvektionszelle. Sie kann auch in der schematischen Darstellung aus \cref{scheme_t} erkannt werden.
-\\
-Die Haftbedingung der Fluidmechanik bedingt ein besonderes Geschwindigkeitsprofil. Die Geschwindigkeit an den Grenzen der Konvektionszelle muss verschwinden. Zugleich verschwindet die Geschwindigkeit aber auch im Zentrum der Rotation. Dadurch ergibt sich das in \cref{fig:scheme_v} zu sehende Geschwindigkeitsprofil.
+
 
