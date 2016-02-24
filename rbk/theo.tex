@@ -1,0 +1,30 @@
+\subsection{Rayleigh-B\'enard-Konvektion}
+Rayleigh-B\'enard-Konvektion ist eine Form von Konvektion, die durch einen Dichtegradienten und Gravitation verursacht wird. 
+Sie tritt zum Beispiel auf wenn eine Flüssigkeit von unten erhitzt wird, wie es in einem Kochtopf der Fall ist. 
+Der Temperaturgradient führt zu Dichteunterschieden im Fluid. Durch diese und die Gravitation wird wärmeres Fluid durch die Auftriebskraft nach oben gedrückt, während kaltes Fluid aus dem selben Grund nach unten sinkt.
+Oben angekommen kühlt das warme Fluid ab, und sinkt wieder nach unten. Das Zusammenspiel von steigendem und sinkendem Fluid, führt zur Entstehung von sogenannten Konvektionswalzen (auch \emph{large scale circulations}). Diese Konvektionswalzen führen zu einer Durchmischung der Flüssigkeit und damit zu einer homogenen Temperatur im inneren der Walze.
+Sie können abhängig von Randbedingungen, wie der Form des Gefäßes indem sich das Fluid befindet, unterschiedliche Strukturen bilden wie z.B. rechteckige und hexagonale Prismen und Spiralen.
+\\
+Neben den Walzen der Rayleigh-B\'enard-Konvektion treten auch sogenannte \emph{Plumes} auf. Dabei handelt es sich um lokale Wolken, die eine von ihrer unmittelbaren Umgenung verschiedene Temperatur haben. 
+
+\subsection{Fluidmechanik und Wärmetransport}
+Grundlage für die theroretische Beschreibung der Rayleigh-B\'enard-Konvektion ist die Navier-Stokes-Gleichung. Sie beschreibt das Geschwindigkeitsfeld $\VE v$ eines Fluides unter der Wirkung von Druck-, Reibungs- und -unter Umständen- externer Kraft.
+Für die Rayleigh-B\'enard-Konvektion wird die Navier-Stokes-Gleichung durch die Boussinesq-Näherung vereinfacht.
+Diese Näherung besteht in der Annahme, dass die Dichte $\rho$ des Fluides nicht vom Druck $p$ abhängt, sondern lediglich linear mit der Temperatur $T$ verbunden ist über die \cref{eq:bouss}:
+\begin{align}
+\rho-\rho_0 = -\rho_0\alpha(T-T_0). \label{eq:bouss}
+\end{align}
+Hierbei ist $\rho_0$ die Dichte der Flüssigkeit bei einer Referenztemperatur $T_0$. Der Koeffizient $\alpha$ bezeichnet den thermischen Ausdehungskoeffizienten. Zudem wird angenommen, dass alle anderen physikalischen Größen unabhängig von der Temperatur sind.
+\\
+Mit dieser Näherung ergibt sich die Navier-Stokes-Gleichung zu \cref{eq:navier}:
+\begin{align}
+\frac{1}{\text{Pr}}\left(\frac{\partial}{\partial t} \VE v + \VE v \cdot \nabla \VE v \right) -\Delta \VE v + \nabla p = \text{Ra} \VE e_z \label{eq:navier}
+\end{align}
+Hierbei ist die Gleichung in eine dimensionslose Form gebracht worden. Die beiden dimensionslosen Kennzahlen bezeichen die Rayleigh- und die Prandtlzahl, die sich jeweils als 
+\begin{align}
+\text{Ra} = \frac{g\alpha\Delta T L^3}{\kappa\nu} \label{eq:rayleigh}, \\
+\text{Pr} = \frac{\nu}{\kappa} \label{eq:pradtl}
+\end{align}
+ergeben. Mit Erdbeschleunigung $g$, Temperaturunterschied $\Delta T = T-T_0$, charakteristischer Länge $L$, thermischer Diffusivität $\kappa$ und kinematischer Viskosität $\nu$.
+\\
+Wie man bereits aus \cref{eq:prandtl} entnehmen kann, beschreibt die Prandtlzahl das Verhältnis von Viskosität zu Diffusivität. Die Rayleighzahl gibt Aussage darüber ob der Wärmetransport in einem Fluid diffusiv oder konvektiv erfolgt. Unterhalb einer kritischen Rayleighzahl $\text{Ra}_{crit}$ findet der Wärmetransport nur durch Diffusion statt. Für diesen Versuch ergibt sich etwa eine Wert von $\text{Ra}_{crit} = 1700$ \cite{Racrit}.
