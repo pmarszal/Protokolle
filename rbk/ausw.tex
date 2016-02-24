@@ -44,7 +44,7 @@ Diese sind in \cref{fig:sim-temp} dargestellt.
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{plots/T_sim_Profile.pdf}
-	\caption{Temperaturprofile einer Rayleigh-Benard-Zelle zu verschiedenen Rayleighzahlen.}\label{fig:sim-temp}
+	\caption{Temperaturprofile einer Rayleigh-Benard-Zelle zu verschiedenen Rayleighzahlen. Unterlegt ist die mittels der Methode aus \cref{sec:grenz} ermittelte Grenzschicht. Für die Simulation bei $\text{Ra}=10^3$ lässt sich kein sinnvoller Wert für die Grenzschicht angeben, da das gesamte Temperaturprofil linear verläuft, d.h. der gesamte Wärmetransport diffusiv erfolgt. Dies entspricht der Theorie nach einer Nusseltzahl von 1.}\label{fig:sim-temp}
 \end{figure}
 Für die 30-stündige Messung ist es interessant die Verteilung der Messwerte zu betrachten. \cref{fig:hist} zeigt Histogramme der gemessenen Werte über die gesamte Messreihe hinweg. Man erkennt, dass das Maximum der Verteilungen für jeden Thermistor in etwa bei der gleichen Temperatur \SI{15.5}{\celsius} liegt. 
 Allerdings kommt es durch die Nähe zur Heiz- bzw. Kühlplatte zu häufigen Messung von Temperaturen mit einer starken Abweichung vom Maximum.
@@ -78,6 +78,7 @@ Aus der 30-stündigen Messung lässt sich die Geschwindigkeit an fünf Stellen d
 Die Zeit $\tau$ des Maximums einer Korrelation entspricht der mittleren Zeit, die ein Plume braucht um von einem Thermistor zum anderen zu fließen.
 Mit dieser Zeit und dem Abstand zwischen der betrachteten Thermistoren lässt sich die Geschwindigkeit zwischen diesen bestimmen.
 In \cref{fig:korr} sind die Korrelationen zwischen jeweils benachbarten Thermistoren zu sehen. Aus den Maxima der Korrelationen ergeben sich die mittleren Geschwindigkeiten in \cref{fig:v_korr}.
+Das Geschwindigkeitsprofil aus den Korrelationsmessungen spiegelt kein erwartetes Profil mit eindeutigem Minimum im Zentrum der Zelle wieder.
 \\
 \begin{figure}
 	\input{Figures/v_correlation_12}\caption{Korrelation benachbarter Thermistoren. Die Zeit der Maximums entspricht der Zeit, die ein Plume im Mittel braucht um die Strecke zwischen den Thermistoren zu überwinden. Zwischen dritten und viertem Thermistor liegt das Maximum bei einer größeren Zeit als erwartet, da der Abstand des dritten und vierten Thermistors größer ist.}\label{fig:korr}
@@ -85,12 +86,37 @@ In \cref{fig:korr} sind die Korrelationen zwischen jeweils benachbarten Thermist
 \begin{figure}
 	\input{Figures/vel_corr_therm}\caption{Aus den Korrelationen bestimmte Werte für die Geschwindigkeit in Abhängigkeit vom Abstand von der Kühlplatte. Das erwartete Profil mit Minimum in der Mitte, wie in \cref{fig:vprof_sim} ist nicht zu erkennen.}\label{fig:v_korr}
 \end{figure}
-
-%\begin{figure}
-%
-%\end{figure}
+In der Simulation lässt sich das Geschwindigkeitsprofil direkt bestimmen, ohne Plumes zur Bestimmung heranziehen zu müssen.
+Die gemessenen Profile sind in \cref{fig:vprof_Ra_1e3,fig:vprof_Ra_1e4,fig:vprof_Ra_1e5,fig:vprof_Ra_1e6,fig:vprof_Ra_1e7} zu sehen. 
+Eine Ausbildung zweier Maxima ist ab einer Rayleighzahl von $10^4$ deutlich zu erkennen. 
+Bei einer Rayleighzahl von $10^3$ jedoch ist die Geschwindigkeit $\approx 0$. 
+In \cref{fig:vprof_Ra_1e3} sind demnach nur durch Diffusion verursachte Schwankungen zu sehen.
+\\
+\cref{fig:SimSnapshot} zeigt eine farbkodierte Momentaufnahme des Geschwindigkeits- und Temperaturfeldes. 
+\\
 \input{multiplot}
-
+\subsection{Bestimmung der Nusseltzahl}
+Die Nusseltzahl der Simulationen wurde auf zwei unterschiedliche Arten bestimmt. 
+Mithilfe von \emph{Comsol Multiphysics} wurde das Integral des Wärmegradienten über die obere Kante der Simulationsbox bestimmt.
+Da der Wärmefluss in diesem Aufbau der Kontinuitätsgleichung unterliegt, kann die Linie über die integriert wird frei gewählt werden. 
+Es bietet sich an eine Linie zu wählen, welche in der thermischen Grenzschicht liegt, da der Temperaturgradient dort nahezu konstant ist (siehe \cref{fig:temp-prof}).
+Die Ergebnisse für jede Rayleighzahl lassen sich \cref{fig:nusselt} entnehmen. 
+\\
+Die zweite Methode mit der die Nusseltzahl bestimmt wurde benutzt \cref{eq:nussbound} und die dafür nötige Bestimmung der Grenzschicht. 
+Eine Methode der Grenzschichtbestimmung ist der Fit zweier linearer Funktionen an das Temperaturprofil. Da in der thermischen Grenzschicht nur diffusiver Wärmetransport stattfindet, kann das Temperaturprofil durch eine Gerade beschrieben werden.
+Das Ende der Grenzschicht wird durch den Schnittpunkt mit einer Gerade durch die konstante Temperatur im Zentrum der Zelle markiert. 
+Für unseren wurde das Temperaturprofil außerhalb der Grenzschicht nicht mit einer Konstanten, sondern ebenfalls mit einer linearen Funktion angenähert.
+\\
+Diese Methode wurde sowohl auf die simulierten Messwerte angewandt, als auch auf die experimentell ermittelten. Die Ergebnisse sind ebenfalls in \cref{fig:nusselt} aufgetragen.
+\\
+Es ist ersichtlich, dass die Nusseltzahl über ein Potenzgesetz mit der Rayleighzahl verknüpft ist. Der Fit einer Geraden durch den doppelt-logarithmischen Plot in \cref{fig:nusselt} liefert ein Potenzgesetz der Form $\text{Nu} \propto \text{Ra}^{0.260(8)}$.
+Für den Fit wurde die Gesamtheit der Messwerte verwendet.
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{plots/nusselt_fit.pdf}\caption{Nusseltzahl aufgetragen gegen die Rayleighzahl.
+Der Fit ergibt ein Potenzgesetz für die Beziehung zwischen Nusseltzahl und Rayleighzahl: \mbox{$\text{Nu} \propto \text{Ra}^{0.260(8)}$}. Die Fehler der Messwerte ergeben sich aus der Standardabweichung der jeweilingen linearen Fits und verschwinden für den Großteil der der Messwerte in der logarithmischen Darstellung. Die Werte der Grenzschichtmessung unterliegen zudem einem unbestimmten systematischen Fehler, durch die Wahl der Messwerte für den Fit der linearen Funktionen.}
+\label{fig:nusselt}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % critical rayleigh number 1707
 % wikipedia rayleigh benard
