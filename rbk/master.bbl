@@ -1,0 +1,32 @@
+\begin{thebibliography}{1}
+
+\bibitem{Structures}
+Getling A.V.
+\newblock {\em Rayleigh-Benard Convection: Structures and Dynamics}.
+\newblock Advanced Series in Nonlinear Dynamics. World Scientific, 1997.
+
+\bibitem{comsol}
+Comsol Multiphysics.
+\newblock http://www.comsol.com/.
+
+\bibitem{expo}
+J.~J. {Niemela} and K.~R. {Sreenivasan}.
+\newblock {Confined turbulent convection}.
+\newblock {\em Journal of Fluid Mechanics}, 481:355--384, April 2003.
+
+\bibitem{Racrit}
+W.~H. Reid and D.~L. Harris.
+\newblock Some further results on the bénard problem.
+\newblock {\em Physics of Fluids}, 1(2):102--110, 1958.
+
+\bibitem{Stacey2008}
+Frank~D. Stacey and Paul~M. Davis.
+\newblock {\em Physics of the Earth}.
+\newblock Cambridge University Press, 4th edition, 2008.
+
+\bibitem{tritton}
+D.J. Tritton.
+\newblock {\em Physical Fluid Dynamics}.
+\newblock Oxford Science Publ. Clarendon Press, 1988.
+
+\end{thebibliography}

@@ -171,7 +171,4 @@ Expoenent
          title={Jablonski Diagram},
          url={http://micro.magnet.fsu.edu/primer/java/jablonski/jabintro/},
          urldate={2016-02-08}}
-@online{comsol,
-	author = "Comsol Multiphysics",
-	title="http://www.comsol.com/"
-}
+

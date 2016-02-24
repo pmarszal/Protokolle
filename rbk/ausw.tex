@@ -1,6 +1,6 @@
 \section{Auswertung}
 \subsection{Schattenspiel}
-Die Temperaturen der Heiz- und Kühlplatte wurden zu \SI{11.05}{\celsius} und \SI{19.84}{\celsius} bestimmt. Daraus und aus den Abmessungen der Zelle wird die Rayleighzahl nach \cref{eq:rayleigh} zu ca. $\text{Ra} = 1.01\cdot 10^{9}$ bestimmt.
+Die Temperaturen der Heiz- und Kühlplatte wurden zu \SI{11.05}{\celsius} und \SI{19.84}{\celsius} bestimmt. Daraus und aus den Abmessungen der Zelle wird die Rayleigh-Zahl nach \cref{eq:rayleigh} zu ca. $\text{Ra} = 1.01\cdot 10^{9}$ bestimmt.
 \\
 Die Messung der Geschwindigkeiten der Plume-Schatten ergibt für aufsteigende Plumes \SI{0.50\pm0.01}{\centi\meter\per\second}, und für fallende Plumes ergibt sich eine mittlere Geschwindigkeit von \SI{0.71\pm0.02}{\centi\meter\per\second}.
 Für die Berechnung der Reynoldszahl wird nur die Messung für die aufsteigenden Plumes herangezogen, da es bei der Messung der fallenden Plumes zu einem systematischen Fehler durch die Fokusebene der Beleuchtung kommt. Es ergibt sich eine Reynoldszahl von $\text{Re}=10^{3}$.
@@ -27,24 +27,24 @@ Aus den Messungen der Temperatur als Funktion des Abstandes ergibt sich das in \
 \\
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{plots/T_profile2.pdf}
+\includegraphics[width=0.7\textwidth]{plots/T_profile2.pdf}
 \caption{Temperaturprofil der unteren Hälfte der Zelle, als Funktion des Abstandes von der Heizplatte. Zu sehen ist die vollständige Messreihe mittels beweglichem Thermistor, und die ersten drei Messwerte des Thermistorarrays.
 Zur Bestimmung der thermischen Grenzschicht wurde der Schnittpunkt zweier linearer Fits bestimmt.}\label{fig:temp-prof}
 \end{figure}
-Aus dem Temperaturprofil lässt sich die Nusseltzahl, über die thermische Grenzschicht bestimmen. Der bestimmte Schnittpunkt der beiden in \cref{fig:temp-prof} zu sehenden Fits liegt bei einem Abstand von \SI{0.25\pm0.4}{\centi\meter}. Nach \cref{eq:nusselt} ergibt sich dies zu einer Nusseltzahl von $\text{Nu}=\SI{40\pm7}{}$.
+Aus dem Temperaturprofil lässt sich die Nusselt-Zahl, über die thermische Grenzschicht bestimmen. Der bestimmte Schnittpunkt der beiden in \cref{fig:temp-prof} zu sehenden Fits liegt bei einem Abstand von \SI{0.25\pm0.4}{\centi\meter}. Nach \cref{eq:nus_grenz} ergibt sich dies zu einer Nusselt-Zahl von $\text{Nu}=\SI{40\pm7}{}$.
 \\
 \begin{figure}
 	\centering
-	\includegraphics[width=\textwidth]{plots/T_korr_profile.pdf}
+	\includegraphics[width=0.7\textwidth]{plots/T_korr_profile.pdf}
 	\caption{Messungen des Temperaturprofils mithilfe des Thermistorarrays. Zu sehen sind die Mittelwerte der 30-stündigen Messung, für jeden Thermistor bzw. seine Position.}\label{fig:temp-array}
 \end{figure}
-Die in \cref{fig:temp-prof, fig:temp-array} dargestellten Profile lassen sich mit den aus der Simulation gewonnenen Profilen für unterschiedliche Rayleighzahlen vergleichen.
+Die in \cref{fig:temp-prof,fig:temp-array} dargestellten Profile lassen sich mit den aus der Simulation gewonnenen Profilen für unterschiedliche Rayleigh-Zahlen vergleichen.
 Diese sind in \cref{fig:sim-temp} dargestellt.
 \\
 \begin{figure}
 	\centering
-	\includegraphics[width=\textwidth]{plots/T_sim_Profile.pdf}
-	\caption{Temperaturprofile einer Rayleigh-Benard-Zelle zu verschiedenen Rayleighzahlen. Unterlegt ist die mittels der Methode aus \cref{sec:grenz} ermittelte Grenzschicht. Für die Simulation bei $\text{Ra}=10^3$ lässt sich kein sinnvoller Wert für die Grenzschicht angeben, da das gesamte Temperaturprofil linear verläuft, d.h. der gesamte Wärmetransport diffusiv erfolgt. Dies entspricht der Theorie nach einer Nusseltzahl von 1.}\label{fig:sim-temp}
+	\includegraphics[width=0.7\textwidth]{plots/T_sim_Profile.pdf}
+	\caption{Temperaturprofile einer Rayleigh-B\'enard-Zelle zu verschiedenen Rayleigh-Zahlen. Unterlegt ist die mittels der Methode aus \cref{sec:grenz} ermittelte Grenzschicht. Für die Simulation bei $\text{Ra}=10^3$ lässt sich kein sinnvoller Wert für die Grenzschicht angeben, da das gesamte Temperaturprofil linear verläuft, d.h. der gesamte Wärmetransport diffusiv erfolgt. Dies entspricht der Theorie nach einer Nusselt-Zahl von 1.}\label{fig:sim-temp}
 \end{figure}
 Für die 30-stündige Messung ist es interessant die Verteilung der Messwerte zu betrachten. \cref{fig:hist} zeigt Histogramme der gemessenen Werte über die gesamte Messreihe hinweg. Man erkennt, dass das Maximum der Verteilungen für jeden Thermistor in etwa bei der gleichen Temperatur \SI{15.5}{\celsius} liegt. 
 Allerdings kommt es durch die Nähe zur Heiz- bzw. Kühlplatte zu häufigen Messung von Temperaturen mit einer starken Abweichung vom Maximum.
@@ -84,37 +84,39 @@ Das Geschwindigkeitsprofil aus den Korrelationsmessungen spiegelt kein erwartete
 	\input{Figures/v_correlation_12}\caption{Korrelation benachbarter Thermistoren. Die Zeit der Maximums entspricht der Zeit, die ein Plume im Mittel braucht um die Strecke zwischen den Thermistoren zu überwinden. Zwischen dritten und viertem Thermistor liegt das Maximum bei einer größeren Zeit als erwartet, da der Abstand des dritten und vierten Thermistors größer ist.}\label{fig:korr}
 \end{figure}
 \begin{figure}
-	\input{Figures/vel_corr_therm}\caption{Aus den Korrelationen bestimmte Werte für die Geschwindigkeit in Abhängigkeit vom Abstand von der Kühlplatte. Das erwartete Profil mit Minimum in der Mitte, wie in \cref{fig:vprof_sim} ist nicht zu erkennen.}\label{fig:v_korr}
+	\input{Figures/vel_corr_therm}\caption{Aus den Korrelationen bestimmte Werte für die Geschwindigkeit in Abhängigkeit vom Abstand von der Kühlplatte. Das erwartete Profil mit Minimum in der Mitte, wie in \cref{fig:SimVprof} ist nicht zu erkennen.}\label{fig:v_korr}
 \end{figure}
 In der Simulation lässt sich das Geschwindigkeitsprofil direkt bestimmen, ohne Plumes zur Bestimmung heranziehen zu müssen.
 Die gemessenen Profile sind in \cref{fig:vprof_Ra_1e3,fig:vprof_Ra_1e4,fig:vprof_Ra_1e5,fig:vprof_Ra_1e6,fig:vprof_Ra_1e7} zu sehen. 
-Eine Ausbildung zweier Maxima ist ab einer Rayleighzahl von $10^4$ deutlich zu erkennen. 
-Bei einer Rayleighzahl von $10^3$ jedoch ist die Geschwindigkeit $\approx 0$. 
+Eine Ausbildung zweier Maxima ist ab einer Rayleigh-Zahl von $10^4$ deutlich zu erkennen. 
+Bei einer Rayleigh-Zahl von $10^3$ jedoch ist die Geschwindigkeit $\approx 0$. 
 In \cref{fig:vprof_Ra_1e3} sind demnach nur durch Diffusion verursachte Schwankungen zu sehen.
 \\
 \cref{fig:SimSnapshot} zeigt eine farbkodierte Momentaufnahme des Geschwindigkeits- und Temperaturfeldes. 
 \\
 \input{multiplot}
-\subsection{Bestimmung der Nusseltzahl}
-Die Nusseltzahl der Simulationen wurde auf zwei unterschiedliche Arten bestimmt. 
+\FloatBarrier
+\subsection{Bestimmung der Nusselt-Zahl}
+Die Nusselt-Zahl der Simulationen wurde auf zwei unterschiedliche Arten bestimmt. 
 Mithilfe von \emph{Comsol Multiphysics} wurde das Integral des Wärmegradienten über die obere Kante der Simulationsbox bestimmt.
 Da der Wärmefluss in diesem Aufbau der Kontinuitätsgleichung unterliegt, kann die Linie über die integriert wird frei gewählt werden. 
 Es bietet sich an eine Linie zu wählen, welche in der thermischen Grenzschicht liegt, da der Temperaturgradient dort nahezu konstant ist (siehe \cref{fig:temp-prof}).
-Die Ergebnisse für jede Rayleighzahl lassen sich \cref{fig:nusselt} entnehmen. 
+Die Ergebnisse für jede Rayleigh-Zahl lassen sich \cref{fig:nusselt} entnehmen. 
 \\
-Die zweite Methode mit der die Nusseltzahl bestimmt wurde benutzt \cref{eq:nussbound} und die dafür nötige Bestimmung der Grenzschicht. 
+Die zweite Methode mit der die Nusselt-Zahl bestimmt wurde benutzt \cref{eq:nus_grenz} und die dafür nötige Bestimmung der Grenzschicht. 
 Eine Methode der Grenzschichtbestimmung ist der Fit zweier linearer Funktionen an das Temperaturprofil. Da in der thermischen Grenzschicht nur diffusiver Wärmetransport stattfindet, kann das Temperaturprofil durch eine Gerade beschrieben werden.
 Das Ende der Grenzschicht wird durch den Schnittpunkt mit einer Gerade durch die konstante Temperatur im Zentrum der Zelle markiert. 
-Für unseren wurde das Temperaturprofil außerhalb der Grenzschicht nicht mit einer Konstanten, sondern ebenfalls mit einer linearen Funktion angenähert.
+Für diesen Versuch wurde das Temperaturprofil außerhalb der Grenzschicht nicht mit einer Konstanten, sondern ebenfalls mit einer linearen Funktion angenähert.
 \\
 Diese Methode wurde sowohl auf die simulierten Messwerte angewandt, als auch auf die experimentell ermittelten. Die Ergebnisse sind ebenfalls in \cref{fig:nusselt} aufgetragen.
 \\
-Es ist ersichtlich, dass die Nusseltzahl über ein Potenzgesetz mit der Rayleighzahl verknüpft ist. Der Fit einer Geraden durch den doppelt-logarithmischen Plot in \cref{fig:nusselt} liefert ein Potenzgesetz der Form $\text{Nu} \propto \text{Ra}^{0.260(8)}$.
+Es ist ersichtlich, dass die Nusselt-Zahl über ein Potenzgesetz mit der Rayleigh-Zahl verknüpft ist. Der Fit einer Geraden durch den doppelt-logarithmischen Plot in \cref{fig:nusselt} liefert ein Potenzgesetz der Form $\text{Nu} \propto \text{Ra}^{0.26(1)}$.
 Für den Fit wurde die Gesamtheit der Messwerte verwendet.
 \begin{figure}
 	\centering
-	\includegraphics[width=\textwidth]{plots/nusselt_fit.pdf}\caption{Nusseltzahl aufgetragen gegen die Rayleighzahl.
-Der Fit ergibt ein Potenzgesetz für die Beziehung zwischen Nusseltzahl und Rayleighzahl: \mbox{$\text{Nu} \propto \text{Ra}^{0.260(8)}$}. Die Fehler der Messwerte ergeben sich aus der Standardabweichung der jeweilingen linearen Fits und verschwinden für den Großteil der der Messwerte in der logarithmischen Darstellung. Die Werte der Grenzschichtmessung unterliegen zudem einem unbestimmten systematischen Fehler, durch die Wahl der Messwerte für den Fit der linearen Funktionen.}
+	\includegraphics[width=\textwidth]{plots/nusselt_fit.pdf}\caption{Nusselt-Zahl aufgetragen gegen die Rayleigh-Zahl.
+Der Fit ergibt ein Potenzgesetz für die Beziehung zwischen Nusselt-Zahl und Rayleigh-Zahl: \mbox{$\text{Nu} \propto \text{Ra}^{0.26(1)}$}. 
+Die Fehler der Messwerte ergeben sich aus der Standardabweichung der jeweilingen linearen Fits und verschwinden für den Großteil der der Messwerte in der logarithmischen Darstellung. Die Werte der Grenzschichtmessung unterliegen zudem einem unbestimmten systematischen Fehler, durch die Wahl der Messwerte für den Fit der linearen Funktionen.}
 \label{fig:nusselt}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

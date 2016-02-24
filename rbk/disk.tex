@@ -8,22 +8,24 @@ Es können nicht beide Seiten der Walze gleichzeitig scharfgestellt werden.
 Dadurch kommt es zu einer Überschätzung der Geschwindigkeit auf der unscharfen Seite der Zelle (bei uns die Seite der fallenden Plumes). 
 Aufgrund des schelchteren Kontrastes werden nur die dunkelsten Plumes erkannt. Diese aber sind gleichzeitig die Plumes der größten Temperaturdifferenz zu ihrer Umgebung, und dadurch auch die schnellsten.
 \\
-Bereits im Vorraus des Versuches lässt sich die Größenorndung der Geschwindigkeiten eingrenzen. Die Obergrenze entspricht dem freien Fall mit der Beschleunigung $g\alpha\Delta T$. Über \SI{20}{\centi\meter} führt dies zu einer Geschwindigkeit von \SI{9.1}{\centi\meter\per\second}. Nach unten hin ist die Geschwindigkeit durch die durch die Navier-Stokes-Gleichung beschränkt. Eine Dimensionsanalyse des Kräftegleichgewichts liefert eine Untergrenze von \SI{5e-3}{\centi\meter\per\second}.
+Bereits im Vorraus des Versuches lässt sich die Größenorndung der Geschwindigkeiten eingrenzen. Die Obergrenze entspricht dem freien Fall mit der Beschleunigung $g\alpha\Delta T$. Über \SI{20}{\centi\meter} führt dies zu einer Geschwindigkeit von \SI{9.1}{\centi\meter\per\second}. 
+Nach unten hin ist die Geschwindigkeit durch die Navier-Stokes-Gleichung beschränkt. Eine Dimensionsanalyse des Kräftegleichgewichts liefert eine Untergrenze von \SI{5e-3}{\centi\meter\per\second}. Dies enspricht auch dem Ergebnis der Geschwindigkeit im diffusiven Regime in \cref{fig:vprof_Ra_1e3}.
 \\
 Der gemessene Wert von \SI{0.50\pm0.01}{\centi\meter\per\second} liegt damit im erwarteten Bereich.
 
 \subsection{Temperaturprofile}
 Das mit dem beweglichen Thermistor bestimmte Temperaturprofil spiegelt das erwartete Profil gut wieder.
-Ein lineares Verhalten in der Grenzschicht ist deutlich zu erkennen. Auch der konstante Temperaturverlauf im Zentrum der Zelle ist erkennbar.
-Die Hohe Standardabweichung der Messwerte nah an der Heizplatte wird durch Plumes verursacht. Diese haben vor allem nah an der Heizplatte eine stark unterschiedliche Temperatur im Vergleich zur theroretischen Umgebungstemperatur des Thermistors.
+Ein lineares Verhalten in der Grenzschicht ist deutlich zu erkennen. Auch der konstante Temperaturverlauf im Zentrum der Zelle ist erkennbar (siehe \cref{fig:temp-prof}).
+Die große Standardabweichung der Messwerte nah an der Heizplatte wird durch Plumes verursacht. 
+Diese haben vor allem nah an der Heizplatte eine stark unterschiedliche Temperatur im Vergleich zur theroretischen Umgebungstemperatur des Thermistors.
 Verlässt man die Grenzschicht so verringert sich auch die Fluktuation der Temperatur durch Plumes.
 \\
 Der Vergleich der 30-stündigen Temperaturmessung mit der Messung des beweglichen Transistors, liefert eine gute Übereinstimmung bezüglich der Konstanz der Temperatur im Zentrum der Zelle.
 Allerdings sind die Messwerte der Thermistorarrays geringfügig kleiner als die des einzelen Thermistors. 
-Dies kann durch eine Reihe von Gründen verursacht worden sein, von technischen Unterschieden zwischen Array und Einzelthermistor bis hin zur Temperaturschwankung durch den Tag-Nachtzyklus.
+Dies kann durch eine Reihe von Gründen verursacht worden sein, von technischen Unterschieden zwischen Array und Einzelthermistor bis hin zur Temperaturschwankung durch den Tag-Nacht-Zyklus.
 Der wahrscheinlichste Grund für den niederigeren Wert stammt jedoch daher, dass die für die Array-Messung verwendeten Messwerte von einem früheren F-Praktikumspaar stammen.
 \\
-Die numerisch erzeugten Temperaturprofile zeigen die Abhängigkeit der Rayleigh-Benard-Konvektion von der Rayleighzahl klar auf. 
+Die numerisch erzeugten Temperaturprofile zeigen die Abhängigkeit der Rayleigh-B\'enard-Konvektion von der Rayleighzahl klar auf. 
 Der Überschlag von diffusiver zu konvektiver Wärmeleitung bei Übergang von $\text{Ra}=10^3$ zu $\text{Ra}=10^4$ ist sehr deutlich zu erkennen.
 Anzumerken ist jedoch, dass die Temperatur mit Abstand der Heizplatte leicht anwächst für $\text{Ra} = 10^4$ und $\text{Ra} = 10^5$.
 \\
@@ -31,17 +33,20 @@ Anzumerken ist jedoch, dass die Temperatur mit Abstand der Heizplatte leicht anw
 Dies stimmt auch mit der Beobachtung der großen Standardabweichung in Nähe der Grenzschicht in \cref{fig:temp-prof} überein.
 
 \subsection{Geschwindigkeitsprofile}
-Das über die Frequenzanalyse bestimmte Geschwindigkeitsprofil folgt dem erwarteten Profil relativ gut. Ein Problem jedoch ist die Messung einer Geschwindigkeit während der Thermistor in Kontakt mit der Heizplatte ist. Vermutlich wird dies durch die endliche Ausdehnung des Thermistors ermöglich, da dies die Auflösung der Messung verschlechtert.
-Trotz dieses Problems lässt sich noch eine Grenzschicht im Geschwindigkeitsprofil erkennen, wir es in \cref{fig:v_prof_fc} durch den linearen Fit verdeutlich wird.
+Das über die Frequenzanalyse bestimmte Geschwindigkeitsprofil folgt dem erwarteten Profil relativ gut. Ein Problem jedoch ist die Messung einer Geschwindigkeit während der Thermistor in Kontakt mit der Heizplatte ist. Vermutlich wird dies durch die endliche Ausdehnung des Thermistors ermöglicht, da dies die Auflösung der Messung verschlechtert.
+Trotz dieses Problems lässt sich noch eine Grenzschicht im Geschwindigkeitsprofil erkennen, wie es in \cref{fig:v_prof_fc} durch den linearen Fit verdeutlich wird.
 \\
 Noch problematischer scheint auf den ersten Blick die Geschwindigkeitsmessung durch die Korrelation zu sein.
 Das so ermittelte Profil ähnelt den simulierten Profilen in keinster Weise. Der Grund für diese Form des Profils ist jedoch eng mit dem Problem der Schattenwurfmethode verbunden.
-Zunächst befindet sich das Thermistorarray nicht im Zentrum der Zelle sondern wesentlich äher am Rand. Dadurch befindet es sich zwangsläufig in entweder einem Aufstrom oder Abstrom (in diesem Fall einem Aufstrom) der Walze.
-Bei der gemessenen Geschwindigkeit handelt es sich alse nur um die Geschwindigkeit aufsteigender Plumes.
-Diese kühlen jedoch auf dem Weg nach oben ab. Kühlere Plumes haben weniger Einfluss auf die gesamte Korrelationsfunktion. Die Plumes die an den oberen Thermistoren jedoch noch mit hoher Auflösung erkannt werden, sind die wärmsten Plumes und damit die schnellsten.
-So wird mit dieser Methode keine symmetrische Geschwindigkeitverteilung gemessen.
+Zunächst befindet sich das Thermistorarray nicht im Zentrum der Zelle sondern wesentlich näher am Rand. 
+Dadurch befindet es sich zwangsläufig in entweder einem Aufstrom oder Abstrom (in diesem Fall einem Aufstrom) der Walze.
+Bei der gemessenen Geschwindigkeit handelt es sich also nur um die Geschwindigkeit aufsteigender Plumes.
+Diese kühlen jedoch auf dem Weg nach oben ab. 
+Kühlere Plumes haben weniger Einfluss auf die gesamte Korrelationsfunktion. 
+Die Plumes, die an den oberen Thermistoren jedoch noch mit hoher Auflösung erkannt werden, sind die wärmsten Plumes und damit die schnellsten.
+So wird mit dieser Methode keine symmetrische Geschwindigkeitsverteilung gemessen.
 
-\section{Bestimmung der Nusseltzahl}
+\subsection{Bestimmung der Nusseltzahl}
 Für Rayleighzahlen ab $\text{Ra} = 10^5$ stimmen die Ergebnisse für die Nusseltzahl für die Grenzschichtmethode und die Integralmethode gut überein. Die einzige Abweichung ist bei kleineren Rayleighzahlen (hier nur $10^4$) festzustellen. Die relative Abweichung des Integralergebnisses vom Grenzschichtergebnis beträgt dabei ca. 25~\%.
 Betrachtet man die Temperaturprofile in \cref{fig:sim-temp} so lässt sich vermuten, dass die Grenzschichtmethode bei kleinen Rayleighzahlen ungenauer wird, da das lineare Regime der Temperatur schwerer einzugrenzen ist.
 \\
