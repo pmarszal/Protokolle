@@ -17,20 +17,22 @@
 %huebsche kopfzeilen
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\fancyhead[C]{}
-\fancyfoot[C]{}
-\fancyfoot[RE]{\thepage}
-\fancyfoot[LO]{\thepage}
+%\fancyhead[C]{}
+%\fancyfoot[C]{}
+%\fancyfoot[RE]{\thepage}
+%\fancyfoot[LO]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 \textheight=580pt
 
-
+\bibliographystyle{plain}
 %caption centern
 \usepackage{ccaption}
 \captionstyle{\centerlastline}
 %Unterobjekte
 \usepackage{subcaption}
+
+\usepackage{hyperref}
 
 \newcommand{\mensch}[1]{\textsc{#1}}	% Wichtige Physiker
 \newcommand{\D}{\mbox{d}}				% Fuer gerade d in dx/dy
@@ -49,10 +51,10 @@
 \vspace{1cm}
 
 \begin{center}
-\Large Physikalisches A-Praktikum \\ \vspace{1cm}
+\Large Master Forschungspraktikum \\ \vspace{1cm}
 \hrule \vspace{3mm}
-\large {Versuch 19} \\
-\Huge{\bf Prismen- und Gitterspektroskopie}
+\large {BK.MDS} \\
+\Huge{\bf Molekulardynamik-Simulationen}
 \vspace{5mm}
 \hrule
 \end{center}
@@ -64,14 +66,12 @@
 
   \begin{tabular}{ll}
   Praktikanten: &Philip Marszal\\
-   &Richard Lopp\\
    &\\
-  Betreuer: & Phillip Bastian\\
+  Betreuer: & \\
   &\\
   Gruppe: &\\
   &\\
   Durchgeführt: &\\
-  Abgegeben: &\\
 
 \vspace{1cm}& \\
   E-Mail: & \ttfamily philip.marszal@stud.uni-goettingen.de\\
@@ -79,16 +79,14 @@
 \end{center}
 \end{table}
 \vspace{2cm}
-\flushright\fbox{
-\begin{minipage}{5cm}
-\hfill\vspace{2cm}\\
-\begin{flushright}
-\footnotesize{Testat}
-\end{flushright}
-\end{minipage}}
+
+
 \end{titlepage}
 
 \thispagestyle{empty}
+\newpage
+\thispagestyle{empty}
+\mbox{}
 \newpage
 \thispagestyle{empty}
 \tableofcontents
@@ -137,4 +135,5 @@
 %
 \section{Diskussion}
 \input{disk.tex}
+\bibliography{master}
 \end{document}

@@ -1,0 +1,44 @@
+\begin{thebibliography}{1}
+
+\bibitem{bishop2006pattern}
+C.M. Bishop.
+\newblock {\em Pattern Recognition and Machine Learning}.
+\newblock Information Science and Statistics. Springer, 2006.
+
+\bibitem{chemicalcrc}
+Chemical~Rubber Company.
+\newblock {\em CRC Handbook of Chemistry and Physics}.
+\newblock Number Bd. 79,Teile 1998-1999. CRC Press.
+
+\bibitem{Dem1}
+W.~Demtr{\"o}der.
+\newblock {\em Experimentalphysik 1: Mechanik und W{\"a}rme}.
+\newblock Springer-Lehrbuch. Springer Berlin Heidelberg, 2006.
+
+\bibitem{gromacs}
+GROMACS.
+\newblock http://www.gromacs.org/.
+
+\bibitem{phasediagram}
+M.~Henderson and M.~S. Wertheim.
+\newblock Phase diagram and pv isotherms of argon.
+\newblock {\em The Journal of Chemical Physics}, 51(12):5420--5429, 1969.
+
+\bibitem{PROT}
+Viktor Hornak, Robert Abel, Asim Okur, Bentley Strockbine, Adrian Roitberg, and
+  Carlos Simmerling.
+\newblock Comparison of multiple amber force fields and development of improved
+  protein backbone parameters.
+
+\bibitem{leastsquares}
+Wanzer~Drane R.~H.~Barham.
+\newblock An algorithm for least squares estimation of nonlinear parameters
+  when some of the parameters are linear.
+\newblock {\em Technometrics}, 14(3):757--766, 1972.
+
+\bibitem{Campbell}
+J.B. Reece.
+\newblock {\em Campbell Biology}.
+\newblock Benjamin Cummings / Pearson, 2011.
+
+\end{thebibliography}

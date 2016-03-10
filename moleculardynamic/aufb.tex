@@ -9,7 +9,7 @@ Der Einfluss der Elektronen auf den Atomkern wird wiederum durch ein durch die E
 Dieses effektive Potential wird durch die Koordinaten des Atomkerns bestimmt. Es berücksichtigt sowohl Bindungen in einem Molekül als auch langreichweitige Wechselwirkungen wie die van-der-Waals-Kräfte.
 \\ \noindent
 Die Bewegung der Atomkerne kann darauf hin nach den klassischen Bewegungsgleichungen integriert werden.
-Hier wird der \emph{leap frog} Algorithmus zur Integration verwendet:
+Hier wird der \emph{leap frog} Algorithmus zur Integration verwendet, wie er ausführlich in \cite{bishop2006pattern} behandelt wird:
 \begin{align}
 v\left(t+\frac{\Delta t}{2}\right) = v\left(t-\frac{\Delta t}{2}\right) + \frac{F(t)}{m}\Delta t, \\
 r\left(t+\frac{\Delta t}{2}\right) = r(t) + v\left(t+\frac{\Delta t}{2}\right)\Delta t.
@@ -19,7 +19,17 @@ Des weiteren müssen für eine sinnvolle Simulation einige technische Grenzen ge
 Die Integrationsschrittweite wird den schnellsten erwarteten Fluktuationen entsprechend gewählt. In diesem Versuch sind dies Fluktuationen von Wasserstoffatomen, die auf einer Zeitskala von $10^{-14}$~s geschehen. Als Schrittweite wird deswegen $\Delta t = 10^{-15}$~s gewählt.
 Um Randeffekte zu vermeiden werden periodische Randbedingungen gewählt, wodurch prinzipiell ein unendlich großes System simuliert wird.
 \\ \noindent
-Die Molekulardynamik Simulation wird in diesem Versuch mit dem Softwarepaket \emph{GROMACS} durchgeführt.
+Die Molekulardynamik Simulation wird in diesem Versuch mit dem Softwarepaket \emph{GROMACS} \cite{gromacs} durchgeführt.
+
+%\begin{table}
+%\centering
+%\caption{}
+%\begin{tabular}
+%Wärmebadkopplung Berendsen
+%Zeitkonstante 1~ps
+%Proteinkraftfeld AMBER99SB protein, nucleic AMBER94 \cite{PROT}
+%\end{tabular}
+%\end{table}
 
 \subsection{Principal Component Analysis}
 Die Hauptkomponentenanalyse oder PCA (engl. Principal Component Analysis) ist eine Methode der Datenanalyse, die aus einem Datensatz Linearkombinationen von Variablen erzeugt die maximalen Einfluss auf die Dynamik haben.
@@ -27,5 +37,5 @@ Dazu wird zunächst die Kovarianz-Matrix des Datensatzes bestimmt. Anschließend
 Die Basisvektoren dieser Basis entsprechen den Hauptkomponenten oder PCs (engl. Principal Components).
 Das zugehörige Diagonalelement der Kovarianz-Matrix entspricht der auf dieser Achse auftretender Varianz der Daten.
 \\ \noindent
-Die Hauptkomponenten mit der größten Varianz entsprechen den Variablen mit der stärksten Aussagekraft über den Zustand des Systems. Vernachlässigt man Hauptkomponenten geringer Varianz, so lässt sich die Dimensionalität des Datensatzes stark verringern ohne Information einzubüßen.
+Die Hauptkomponenten mit der größten Varianz entsprechen den Variablen mit der stärksten Aussagekraft über den Zustand des Systems. Vernachlässigt man Hauptkomponenten geringer Varianz, so lässt sich die Dimensionalität des Datensatzes stark verringern ohne Information einzubüßen \cite{bishop2006pattern}.\\
 In diesem Versuch wird es hilfreich sein komplexe Proteinbewegungen auf zwei essentielle Bewegungen zu reduzieren um die Arbeitsweise des Proteins zu untersuchen.
