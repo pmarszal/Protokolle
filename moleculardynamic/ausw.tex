@@ -89,7 +89,7 @@ Bei diesem Druck hat Argon einen Siedepunkt von ca. 98~K \cite{phasediagram}. Be
 % siedepunkt = 107~K
 Als nächstes wird das Gefrieren von flüssigem Argon betrachtet. Der Druck des Gases bei 100~K entspricht etwa 5.8~bar, der Siedepunkt bei diesem Druck liegt bei ca. 107~K \cite{phasediagram}.
 In Abb. \ref{fig:liqtemp}) und \ref{fig:liqpot} ist der Verlauf der Temperatur und der potentiellen Energie zu sehen.
-
+Das Gefrieren des Argons setzt bei einer Temperatur von ca. 45~K ein. 
 \begin{figure}
 \begin{subfigure}{0.45\textwidth}\centering
 \includegraphics[width=\textwidth]{/home/winz3r/Documents/Protokolle/moleculardynamic/temp_cool_ui.pdf}\caption{\centering Verlauf der Temperatur beim Abkühlen von flüssigem Argon von 100~K auf 25~K, bei einem Druck von 5.8~bar.}\label{fig:liqtemp}
@@ -104,7 +104,8 @@ In Abb. \ref{fig:liqtemp}) und \ref{fig:liqpot} ist der Verlauf der Temperatur u
 Es lässt sich außerdem die Anzahl der Atome in einem bestimmten Abstand eines Atoms bestimmen. Dies ist in Abb. \ref{fig:nearest}) dargestellt. Die Verteilung ist zu Beginn in der flüssigen Phase und am Ende der Simulation in der festen Phase bestimmt worden.
 \begin{figure}
 \centering
-\includegraphics[width=0.75\textwidth]{/home/winz3r/Documents/Protokolle/moleculardynamic/nearest.pdf}\caption{ \centering Prozentsatz von Nachbarn eines Atoms als Funktion des Abstandes. Die Verteilung wurde zu Beginn der Simulation und nach Ende der Simulation festgestellt.}\label{fig:nearest}
+\includegraphics[width=0.75\textwidth]{/home/winz3r/Documents/Protokolle/moleculardynamic/nearest.pdf}\caption{ \centering Radiale Verteilung der Argonatome als Funktion des Abstandes von einem Atom. Der Abstand ist in Einheiten des Durchmessers eines Argonatomes dargestellt ($d=0.376$~nm). Die Verteilung wurde zu Beginn der Simulation und nach Ende der Simulation als Mittel über ein Zeitintervall festgestellt.
+Das Auftreten der Peaks im Festkörper entspricht dem theroretisch erwarteten \emph{fcc}-Gitter eines Argon-Kristalls.}\label{fig:nearest}
 \end{figure}
 \noindent
 Zudem lässt sich die Diffusionskonstante des Argons bestimmen. Dazu wird die Einstein'sche Diffusionsrelation auf die durchschnittliche quadratische Abweichung vom Startpunkt bezogen. \emph{GROMACS} liefert hierfür ein Ergebnis von $2.5(1)\cdot 10 ^{-5}$~cm$^2$/s, der experimentelle Wert liegt bei $2.43 \cdot
@@ -119,7 +120,7 @@ Eine mit \emph{VMD} erzeugte 3d-Darstellung der B1 Domäne des Proteins G ist in
 die gelben Pfeile stellen $\beta$-Faltblatt Strukturen da, und die violette Spirale eine $\alpha$-Helix Struktur. In grau sind Verbindungen zwischen den Sekundärstrukturen dargestellt.
 \begin{figure}
 \centering
-\includegraphics[width=0.6\textwidth]{/home/winz3r/Desktop/philip_vitali-06012016/protein/path3367.png}\caption{Dreidimensionale Darstellung der B1 Domäne des Proteins G. Gelb: $\beta$-Faltblatt; Violett: $\alpha$-Helix.}\label{fig:3dpgb}
+\includegraphics[width=0.5\textwidth]{/home/winz3r/Desktop/philip_vitali-06012016/protein/path3367.png}\caption{Dreidimensionale Darstellung der B1 Domäne des Proteins G. Gelb: $\beta$-Faltblatt; Violett: $\alpha$-Helix.}\label{fig:3dpgb}
 \end{figure}
 \noindent
 Wie stark die durchschnittlichen Positionen der Atome des Proteins von ihrer Anfangsposition abweichen, ist in Abb. \ref{fig:rmsd}) als Funktion der Zeit aufgetragen. Der starke Anstieg zu Beginn der Simulation wird durch Minimierung der freien Energie verursacht.
