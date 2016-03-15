@@ -51,7 +51,6 @@ Die dazugehörige potentielle Energie ist in Abb. \ref{fig:cool_pot1ns}) bis \re
   \caption{Potentielle Energie der Simulationen von gasförmigen Argon beim Abkühlen bzw. Erwärmen.}
 \end{figure}
 Zusätzlich ist in den Abbildungen \ref{fig:cool_temp10ns}) und \ref{fig:cool_pot10ns}) der Vergleich zwischen Erwärmen und Abkühlen des Argon Gases zu sehen.
-
 \\ \noindent
 Aus dem Verlauf der potentiellen Energie lässt sich der Siedepunkt des Argongases bestimmen. Dazu wird eine Logistische Kurve,
 \begin{align}
@@ -104,7 +103,8 @@ Das Gefrieren des Argons setzt bei einer Temperatur von ca. 45~K ein.
 Es lässt sich außerdem die Anzahl der Atome in einem bestimmten Abstand eines Atoms bestimmen. Dies ist in Abb. \ref{fig:nearest}) dargestellt. Die Verteilung ist zu Beginn in der flüssigen Phase und am Ende der Simulation in der festen Phase bestimmt worden.
 \begin{figure}
 \centering
-\includegraphics[width=0.75\textwidth]{/home/winz3r/Documents/Protokolle/moleculardynamic/nearest.pdf}\caption{ \centering Radiale Verteilung der Argonatome als Funktion des Abstandes von einem Atom. Der Abstand ist in Einheiten des Durchmessers eines Argonatomes dargestellt ($d=0.376$~nm). Die Verteilung wurde zu Beginn der Simulation und nach Ende der Simulation als Mittel über ein Zeitintervall festgestellt.
+\includegraphics[width=0.75\textwidth]{/home/winz3r/Documents/Protokolle/moleculardynamic/nearest.pdf}
+\caption{Radiale Verteilung der Argonatome als Funktion des Abstandes von einem Atom. Der Abstand ist in Einheiten des Durchmessers eines Argonatomes dargestellt ($d=0.376$~nm). Die Verteilung wurde zu Beginn der Simulation und nach Ende der Simulation als Mittel über ein Zeitintervall festgestellt.
 Das Auftreten der Peaks im Festkörper entspricht dem theroretisch erwarteten \emph{fcc}-Gitter eines Argon-Kristalls.}\label{fig:nearest}
 \end{figure}
 \noindent
@@ -126,7 +126,7 @@ die gelben Pfeile stellen $\beta$-Faltblatt Strukturen da, und die violette Spir
 Wie stark die durchschnittlichen Positionen der Atome des Proteins von ihrer Anfangsposition abweichen, ist in Abb. \ref{fig:rmsd}) als Funktion der Zeit aufgetragen. Der starke Anstieg zu Beginn der Simulation wird durch Minimierung der freien Energie verursacht.
 Im Gegensatz zur Minimierung der Energie wird nun nicht mehr nur die potentielle Energie minimiert.
 Das Verhalten der potentiellen Energie wird in Abb. \ref{fig:rmpot}) veranschaulicht.
-Die Fluktuationen der einzelnen Aminosäuren ist in Abb. \ref{fig:rmsf} dargestellt. Zu erkennen sind deutliche Fluktuationen an den Residuen
+Die Fluktuationen der einzelnen Aminosäuren ist in Abb. \ref{fig:rmsf}) dargestellt. Zu erkennen sind deutliche Fluktuationen an den Residuen
 1, 11, 14, 21, 24 und 42.
 \\ \noindent
 Die mit dem Lösungsmittel in Kontakt stehende Oberfläche des Proteins, lässt sich Abb. \ref{fig:rmsurf}) entnehmen. Der hohe Anteil an hydrophober Oberfläche hängt mit der Funktion des Proteins als Membranprotein zusammen. Die Tatsache, dass sowohl die hydrophile als auch die hydrophobe Oberfläche nur schwach fluktuieren bedeutet, dass sich das Protein nicht stark faltet.
@@ -145,7 +145,7 @@ größtenteils stabil sind und nur an ihren Grenzen schwach fluktuieren.
 \end{subfigure}
 \vspace{0.5cm}
 \begin{subfigure}{0.45\textwidth}
-\includegraphics[width=\textwidth]{/home/winz3r/Documents/Protokolle/moleculardynamic/rmspot.pdf}\caption{\centering Anstieg der potentiellen Energie (kJ/mol) als Resultat der Minimierung der freien Energie.}\label{fig:rmspot}
+\includegraphics[width=\textwidth]{/home/winz3r/Documents/Protokolle/moleculardynamic/rmspot.pdf}\caption{\centering Anstieg der potentiellen Energie (kJ/mol) als Resultat der Minimierung der freien Energie.}\label{fig:rmpot}
 \end{subfigure}
 \hspace{1cm}
 \begin{subfigure}{0.45\textwidth}
@@ -161,7 +161,7 @@ größtenteils stabil sind und nur an ihren Grenzen schwach fluktuieren.
 \end{subfigure}
 \caption{Simulation des Proteins G B1 über einen Zeitraum von 20ps.}
 \end{figure}
-
+\newpage
 \subsubsection{PCA von T4-Phagen Lysozym}
 Die PCA der vorbereiteten Bewegung von T4-Phagen Lysozym liefert Hauptkomponenten mit den in Abb. \ref{fig:pca_val}) aufgetragenen Varianzen. Obwohl es mehr als 480 Atome im Lysozym gibt und damit mehr als 1400 Hauptkomponenten, wird ersichtlich, dass die Bewegung nur in wenigen linear unabhängigen Richtungen stattfindet. Hauptkomponenten mit einer dazugehörigen Varianz nah bei null sind auf die starke Bindung zwischen Atomen einer Aminosäure zurückzuführen und auf Symmetrien, wie die Translationsinvarianz des Systems.
 Die kumulative Varianz der ersten beiden Hauptkomponenten umfasst bereits mehr als 90\% der gesamten Varianz der Atompositionen.
@@ -178,12 +178,13 @@ In Abb. \ref{fig:move}) sind die Bewegungen entlang der ersten beiden Hauptkompo
 
 \begin{figure}
 \centering
-\includegraphics[width=0.7\textwidth]{/home/winz3r/Documents/Protokolle/moleculardynamic/pca_comp.pdf}\caption{\centering Varianz und kumulative Varianz der ersten 20 Hauptkomponenten. Schon nach der fünften Komponente ist kein merkbarer Zuwachs mehr zu erkennen. Die ersten beiden Hauptkomponenten entsprechen einer Varianz von 90.98\%.}\label{fig:pca_val}
+\includegraphics[width=0.7\textwidth]{/home/winz3r/Documents/Protokolle/moleculardynamic/pca_comp.pdf}
+\caption{Varianz und kumulative Varianz der ersten 20 Hauptkomponenten. Schon nach der fünften Komponente ist kein merkbarer Zuwachs mehr zu erkennen. Die ersten beiden Hauptkomponenten entsprechen einer Varianz von 90.98\%.}\label{fig:pca_val}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=0.7\textwidth]{/home/winz3r/Documents/Protokolle/moleculardynamic/pca_val.pdf}\caption{\centering Projektion der Bewegung auf die ersten acht Hauptkomponenten in Abhängigkeit von der Zeit.}\label{fig:pca_comp}
+\includegraphics[width=0.7\textwidth]{/home/winz3r/Documents/Protokolle/moleculardynamic/pca_val.pdf}\caption{Projektion der Bewegung auf die ersten acht Hauptkomponenten in Abhängigkeit von der Zeit.}\label{fig:pca_comp}
 \end{figure}
 
 Einen besonders guten Einblick in die Dynamik des Proteins liefert die Auftragung der ersten Hauptkomponente gegen die zweite. Dadurch wird die Energielandschaft in der sich das Protein bewegt angedeutet. In Abb. \ref{fig:phasespace1}) wird die Bewegung des simulierten Lysozyms auf die Ebene, die von den ersten beiden Hauptkomponenten aufgespannt wird, projiziert.
@@ -196,10 +197,10 @@ Die experimentellen Daten lassen diese lokalen Minima nur erahnen machen aber de
 
 \begin{figure}
 \centering
-\includegraphics[width=0.7\textwidth]{/home/winz3r/Documents/Protokolle/moleculardynamic/phasespace1.pdf}\caption{Projektion der Bewegung des T4-Phagen Lysozyms auf die ersten beiden Hauptkomponenten. Es wird ein zentraler Cluster der Bewegung deutlich.}\label{fig:phasespace1}
+\includegraphics[width=0.5\textwidth]{/home/winz3r/Documents/Protokolle/moleculardynamic/phasespace1.pdf}\caption{Projektion der Bewegung des T4-Phagen Lysozyms auf die ersten beiden Hauptkomponenten. Es wird ein zentraler Cluster der Bewegung deutlich.}\label{fig:phasespace1}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=0.7\textwidth]{/home/winz3r/Documents/Protokolle/moleculardynamic/phasespace2.pdf}\caption{Vergleich der aufgezeichneten Bewegung des Lysozyms mit experimentellen Daten. Die Hauptkomponenten sind Resultate der PCA der experimentellen Daten. Es wird deutlich, dass Simulation 1 und 2 nicht den gesamten Raum der möglichen Bewegungen aufzeigen.}\label{fig:exp}
+\includegraphics[width=0.5\textwidth]{/home/winz3r/Documents/Protokolle/moleculardynamic/phasespace2.pdf}\caption{Vergleich der aufgezeichneten Bewegung des Lysozyms mit experimentellen Daten. Die Hauptkomponenten sind Resultate der PCA der experimentellen Daten. Es wird deutlich, dass Simulation 1 und 2 nicht den gesamten Raum der möglichen Bewegungen aufzeigen.}\label{fig:exp}
 \end{figure}

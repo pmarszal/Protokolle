@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{berendsen}
+H.~J.~C. {Berendsen}, J.~P.~M. {Postma}, W.~F. {van Gunsteren}, A.~{DiNola},
+  and J.~R. {Haak}.
+\newblock {Molecular dynamics with coupling to an external bath}.
+\newblock {\em J. Chem. Phys.}, 81:3684--3690, October 1984.
+
 \bibitem{bishop2006pattern}
 C.M. Bishop.
 \newblock {\em Pattern Recognition and Machine Learning}.
@@ -29,6 +35,8 @@ Viktor Hornak, Robert Abel, Asim Okur, Bentley Strockbine, Adrian Roitberg, and
   Carlos Simmerling.
 \newblock Comparison of multiple amber force fields and development of improved
   protein backbone parameters.
+\newblock {\em Proteins: Structure, Function, and Bioinformatics},
+  65(3):712--725, 2006.
 
 \bibitem{leastsquares}
 Wanzer~Drane R.~H.~Barham.
